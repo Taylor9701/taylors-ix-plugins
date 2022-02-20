@@ -1,0 +1,24 @@
+ITEM.name = "SSP-99"
+ITEM.replacements = "models/nasca/stalker/male_ssp_eco.mdl"
+ITEM.model = "models/stalker/outfit/ecosuit2.mdl"
+ITEM.description= "A SSP-99 suit."
+ITEM.longdesc = "A SSP-99 Scientific Research suit specially designed for the Zone conditions. It is used by scientific expeditions and the eco-stalkers who cooperate with them. It has an integrated air-filtering and air-conditioning system. It is heat and electricity resistant, provides good protection from radiation and biological anomalies. It is resistant to chemically aggressive environments. It is not designed for combat, so it provides minimal bullet and explosive protection."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 96800
+ITEM.flag = "f"
+ITEM.artifactcontainers = {"3"}
+ITEM.weight = 34
+ITEM.addWeight = 33
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.res = {
+	["Bullet"] = 0.30,
+	["Blast"] = 0.20,
+	["Fall"] = 0.20,
+	["Burn"] = 0.80,
+	["Radiation"] = 0.80,
+	["Chemical"] = 0.80,
+	["Shock"] = 0.80,
+	["Psi"] = 0.70,
+}

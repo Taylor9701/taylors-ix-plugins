@@ -1,0 +1,14 @@
+ITEM.name = "Droplet"
+ITEM.model = "models/nasca/etherealsrp_artifacts/droplet.mdl"
+ITEM.description = "Looks like tears."
+ITEM.longdesc = "Absorbs a minor amount of radiation around itself, as well as the user’s energy. Excessive use can make you generally tired. [ -2 RAD | -1 STAM ]"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.price = 1900
+ITEM.flag = "A"
+ITEM.buff = "antirad"
+ITEM.buffval = 2
+ITEM.debuff = "end"
+ITEM.debuffval = 1
+ITEM.isArtefact = true
+ITEM.weight = 0.5

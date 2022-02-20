@@ -1,0 +1,24 @@
+ITEM.name = "SSP-99M"
+ITEM.replacements = "models/nasca/stalker/male_ssp_eco.mdl"
+ITEM.model = "models/stalker/outfit/ecosuit1.mdl"
+ITEM.description= "A SSP-99M suit."
+ITEM.longdesc = "High quality modified SSP-99 Scientific Research Suit. It provides increased body protection from bullet and splinter damage. It is designed for the guards working with scientific expeditions. It provides good protection from radiation and biological anomalies. It is resistant to chemically aggressive environments and other effects dangerous to the body."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 103400
+ITEM.flag = "f"
+ITEM.artifactcontainers = {"3"}
+ITEM.weight = 36
+ITEM.addWeight = 35
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.res = {
+	["Bullet"] = 0.40,
+	["Blast"] = 0.40,
+	["Fall"] = 0.40,
+	["Burn"] = 0.80,
+	["Radiation"] = 0.80,
+	["Chemical"] = 0.80,
+	["Shock"] = 0.80,
+	["Psi"] = 0.70,
+}

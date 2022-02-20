@@ -1,0 +1,26 @@
+ITEM.name = "Jupiter"
+ITEM.model ="models/stalker/outfit/lone_seva.mdl"
+ITEM.replacements ="models/nasca/stalker/male_jupiter_eco.mdl"
+ITEM.description= "A Jupiter suit."
+ITEM.longdesc = "Factory-made SEVA bodysuit adorned with various heavy protective pieces. Whoever designed and assembled it didn't seem to care about effectively wearing two suits at once, and demanded ultimate protection from everything the zone has to offer. Why? That's the real mystery."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 99000
+ITEM.flag = "d"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.overlayPath = "vgui/overlays/hud_sci"
+ITEM.artifactcontainers = {"2"}
+ITEM.img = Material("vgui/hud/seva.png")
+ITEM.weight = 20
+ITEM.addWeight = 50
+ITEM.res = {
+	["Bullet"] = 0.50,
+	["Blast"] = 0.40,
+	["Fall"] = 0.40,
+	["Burn"] = 0.60,
+	["Radiation"] = 0.60,
+	["Chemical"] = 0.60,
+	["Shock"] = 0.60,
+	["Psi"] = 0.60,
+}

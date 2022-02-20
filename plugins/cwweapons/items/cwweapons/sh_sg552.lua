@@ -1,0 +1,9 @@
+ITEM.name = "SIG SG 552"
+ITEM.description= "A Swiss assault rifle. Fires 5.56x45mm."
+ITEM.model = "models/weapons/ethereal/sg552/w_sg552.mdl"
+ITEM.class = "cw_kk_ins2_sg552"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 45000
+ITEM.weight = 7

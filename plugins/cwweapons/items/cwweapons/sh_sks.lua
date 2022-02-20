@@ -1,0 +1,9 @@
+ITEM.name = "SKS"
+ITEM.description= "An old Russian semi-automatic rifle chambered for 7.62x39mm."
+ITEM.model = "models/weapons/ethereal/w_sks.mdl"
+ITEM.class = "cw_kk_ins2_sks"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 1
+ITEM.price = 13400
+ITEM.weight = 9

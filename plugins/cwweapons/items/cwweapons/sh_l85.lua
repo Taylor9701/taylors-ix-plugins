@@ -1,0 +1,9 @@
+ITEM.name = "L85"
+ITEM.description = "A bullpup assault rifle. Fires 5.56x45mm."
+ITEM.model = "models/weapons/ethereal/w_l85a2.mdl"
+ITEM.class = "cw_kk_ins2_l85a2"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 65000
+ITEM.weight = 11

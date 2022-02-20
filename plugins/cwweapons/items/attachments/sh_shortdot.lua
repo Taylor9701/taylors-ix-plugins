@@ -1,0 +1,11 @@
+ITEM.name = "Schmidt Shortdot"
+ITEM.description = "A German made optical sight with a 2.5x magnification and cross-type crosshair."
+ITEM.category = "Optics"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.attachName = "md_schmidt_shortdot"
+ITEM.model = "models/cw2/attachments/pso.mdl"
+ITEM.slot = 1
+ITEM.weight = 2
+ITEM.price = 17500
+ITEM.isAttachment = true

@@ -1,9 +1,0 @@
-ITEM.name = "14.5x114mm"
-ITEM.model = "models/Items/BoxMRounds.mdl"
-ITEM.ammo = "14.5x114MM"
-ITEM.ammoAmount = 100
-ITEM.description = "The 14.5x114mm round was originally developed for the PTRS and PTRD anti-tank rifles, but was later used as the basis for the KPV heavy machine gun that formed the basis of the ZPU series anti-aircraft guns that is also the main armament of the BTR series of armoured personnel carriers up to the BTR-80."
-ITEM.width = 2
-ITEM.height = 1
-ITEM.isAmmo = true
-ITEM.category = "Ammunition"

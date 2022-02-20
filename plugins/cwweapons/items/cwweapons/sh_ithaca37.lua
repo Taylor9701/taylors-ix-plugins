@@ -1,0 +1,9 @@
+ITEM.name = "Ithaca 37"
+ITEM.description = "The Ithaca 37 is a pump-action shotgun made in large numbers for the civilian, military, and police markets. It utilizes a novel combination ejection/loading port on the bottom of the gun which leaves the sides closed to the elements. Since shotshells load and eject from the bottom, operation of the gun is equally convenient for both right and left hand shooters."
+ITEM.model = "models/weapons/ethereal/w_ithaca37.mdl"
+ITEM.class = "cw_kk_ins2_ithaca37"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 6000
+ITEM.weight = 5

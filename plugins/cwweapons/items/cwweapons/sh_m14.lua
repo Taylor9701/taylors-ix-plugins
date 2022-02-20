@@ -1,0 +1,9 @@
+﻿ITEM.name = "M14 EBR"
+ITEM.description= "A modernized M14 battle rifle. Fires 7.62x51mm."
+ITEM.model = "models/weapons/ethereal/w_m14.mdl"
+ITEM.class = "cw_kk_ins2_m14"
+ITEM.weaponCategory = "primary"
+ITEM.width = 5
+ITEM.height = 2
+ITEM.price = 90000
+ITEM.weight = 11

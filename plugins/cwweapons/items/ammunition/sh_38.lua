@@ -1,0 +1,12 @@
+ITEM.name = ".38 Special"
+ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.ammoAmount = 150
+ITEM.ammo = ".38 Special"
+ITEM.description = "A Box that contains .38 Special"
+ITEM.category = "Ammunition"
+ITEM.isAmmo = true
+ITEM.ammoPerBox = 50
+ITEM.price = 100
+ITEM.weight = 0.046

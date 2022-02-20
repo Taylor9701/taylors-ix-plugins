@@ -1,0 +1,14 @@
+ITEM.name = "Slug"
+ITEM.model ="models/nasca/etherealsrp_artifacts/slug.mdl"
+ITEM.description = "Very slimey."
+ITEM.longdesc = "Artifact is amorphous and sticks to objects like goo. Also stimulates blood coagulation. [ +2 WH | +3 RAD ]"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.price = 6900
+ITEM.flag = "A"
+ITEM.isArtefact = true
+ITEM.buff = "woundheal"
+ITEM.buffval = 2
+ITEM.debuff = "rads"
+ITEM.debuffval = 3
+ITEM.weight = 1.3

@@ -1,0 +1,12 @@
+ITEM.name = "7.62x25mm"
+ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.ammo = "7.62x25MM"
+ITEM.ammoAmount = 150
+ITEM.description = "The 7.62x25mm cartridge is a Russian bottle-necked pistol cartridge widely used in former Soviet satellite states, China, and Pakistan among other countries."
+ITEM.width = 1
+ITEM.height = 1
+ITEM.isAmmo = true
+ITEM.category = "Ammunition"
+ITEM.ammoPerBox = 50
+ITEM.price = 80
+ITEM.weight = 0.048

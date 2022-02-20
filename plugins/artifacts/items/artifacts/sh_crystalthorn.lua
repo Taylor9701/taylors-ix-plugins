@@ -1,0 +1,11 @@
+ITEM.name = "Crystal Thorn"
+ITEM.model = "models/nasca/etherealsrp_artifacts/crystal_thorn.mdl"
+ITEM.description = "Pointy artifact."
+ITEM.longdesc = "An odd combination of two artifacts named 'Crystal' and 'Thorn', duly named, 'Crystal Thorn'. A lot of creative thought was put into this. It's pointy and seems to prick the skin, absorbing some radiation with a trade-off of taking blood with it. [ -2 RAD | -2 WH ]"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.price = 3100
+ITEM.flag = "A"
+ITEM.buff = "antirad"
+ITEM.buffval = 1
+ITEM.weight = 0.8

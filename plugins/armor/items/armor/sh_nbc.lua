@@ -1,0 +1,25 @@
+ITEM.name = "NBC Suit"
+ITEM.model ="models/stalker/outfit/sunrise.mdl"
+ITEM.replacements ="models/nasca/stalker/male_nbc_lone.mdl"
+ITEM.description= "A NBC suit."
+ITEM.longdesc = "This suit is a modified version of the standard Sunrise outfit, composed of a camouflaged CBRN suit with a Class III-a Kevlar vest. Favored by diggers and underground explorers."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 46200
+ITEM.flag = "b"
+ITEM.isHelmet = false
+ITEM.isGasmask = true
+ITEM.overlayPath = "vgui/overlays/hud_gas"
+ITEM.artifactcontainers = {"2"}
+ITEM.img = Material("vgui/hud/nbc.png")
+ITEM.weight = 7
+ITEM.res = {
+	["Bullet"] = 0.30,
+	["Blast"] = 0.20,
+	["Fall"] = 0.20,
+	["Burn"] = 0.50,
+	["Radiation"] = 0.50,
+	["Chemical"] = 0.50,
+	["Shock"] = 0.50,
+	["Psi"] = 0.00,
+}

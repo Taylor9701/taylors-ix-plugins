@@ -1,0 +1,9 @@
+ITEM.name = "AKs-74u"
+ITEM.description = "A short folding-stock assault rifle chambered for 5.45x39mm."
+ITEM.model = "models/weapons/ethereal/item_aks74u.mdl"
+ITEM.class = "cw_kk_ins2_aks74u"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 28000
+ITEM.weight = 6

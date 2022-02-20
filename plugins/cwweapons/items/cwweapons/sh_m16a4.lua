@@ -1,0 +1,9 @@
+ITEM.name = "M16A4"
+ITEM.description= "An American combat rifle chambered for 5.56x45mm."
+ITEM.model = "models/weapons/ethereal/w_m16.mdl"
+ITEM.class = "cw_kk_ins2_m16a4"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 42500
+ITEM.weight = 8

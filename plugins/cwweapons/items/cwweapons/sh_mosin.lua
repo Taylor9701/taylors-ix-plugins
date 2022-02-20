@@ -1,0 +1,9 @@
+ITEM.name = "Mosin Nagant"
+ITEM.description = "An old bolt action rifle mostly made out of wood. Fires 7.62x54mm."
+ITEM.model = "models/weapons/ethereal/w_mosin.mdl"
+ITEM.class = "cw_kk_ins2_mosin"
+ITEM.weaponCategory = "primary"
+ITEM.width = 5
+ITEM.height = 1
+ITEM.price = 25000
+ITEM.weight = 9

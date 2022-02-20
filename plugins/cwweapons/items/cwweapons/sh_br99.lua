@@ -1,0 +1,9 @@
+ITEM.name = "BR-99"
+ITEM.description = "A modified AR-15, the BR-99 is a 12 gauge shotgun featuring all of the reliability, comfort, and versatility of the AR platform. With fire select, this shotgun can either be semi- or fully automatic."
+ITEM.model = "models/weapons/ethereal/w_br99.mdl"
+ITEM.class = "cw_kk_ins2_br99"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 25200
+ITEM.weight = 8

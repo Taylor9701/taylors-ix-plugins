@@ -1,0 +1,9 @@
+ITEM.name = "C. K. Edge"
+ITEM.description = "The Cobalt Kinetics Edge rifle is a heavily modified AR-15 platform, sporting top-quality parts and manufacturing processes for superb accuracy and recoil control. Fires 5.56x45 rounds."
+ITEM.model = "models/weapons/ethereal/w_k2.mdl"
+ITEM.class = "cw_kk_ins2_edge"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 28000
+ITEM.weight = 7

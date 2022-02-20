@@ -1,0 +1,25 @@
+ITEM.name = "Beril-5M" 
+ITEM.replacements = "models/nasca/stalker/male_berill5m_lone.mdl"
+ITEM.model = "models/stalker/outfit/military.mdl"
+ITEM.description= "Beril-5M Suit." 
+ITEM.longdesc = "This item comprises an early PS-5 body suit with beryllium sputter and military armored vest. Designed for assault operations in highly radioactive areas, it is ineffective in areas of high anomalous activity. The suit makes its way to stalkers through the military, who exchange it for loot."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 79200
+ITEM.flag = "c"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"1"}
+ITEM.weight = 27
+ITEM.addWeight = 35
+ITEM.res = {
+	["Bullet"] = 0.50,
+	["Blast"] = 0.60,
+	["Fall"] = 0.60,
+	["Burn"] = 0.50,
+	["Radiation"] = 0.20,
+	["Chemical"] = 0.20,
+	["Shock"] = 0.20,
+	["Psi"] = 0.40,
+}
+-- ITEM.noBusiness = true

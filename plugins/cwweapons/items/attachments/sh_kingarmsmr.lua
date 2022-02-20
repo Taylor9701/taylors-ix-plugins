@@ -1,0 +1,11 @@
+ITEM.name = "King Arms MR"
+ITEM.description = "Taiwanese reflex sight. T type sight."
+ITEM.category = "Sights"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.attSearch = { "md_reflex",}
+ITEM.model = "models/cw2/attachments/microt1.mdl"
+ITEM.weight = 1
+ITEM.price = 9500
+ITEM.slot = 1
+ITEM.isAttachment = true

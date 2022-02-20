@@ -1,0 +1,12 @@
+ITEM.name = "7.62x51mm Belt"
+ITEM.model = "models/Items/BoxMRounds.mdl"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.ammo = "7.62x51MMB"
+ITEM.description = "A Belt of 7.62x51mm"
+ITEM.category = "Ammunition"
+ITEM.ammoAmount = 300
+ITEM.isAmmo = true
+ITEM.ammoPerBox = 100
+ITEM.price = 2300
+ITEM.weight = 0.068

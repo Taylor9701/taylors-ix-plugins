@@ -1,0 +1,9 @@
+ITEM.name = "IMI Uzi"
+ITEM.description= "A submachinegun with a folding stock. Fires 9x19mm."
+ITEM.model = "models/weapons/ethereal/w_uzi.mdl"
+ITEM.class = "cw_kk_ins2_uzi"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 3400
+ITEM.weight = 8

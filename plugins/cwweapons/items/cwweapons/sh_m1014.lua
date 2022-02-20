@@ -1,0 +1,9 @@
+ITEM.name = "M1014"
+ITEM.description= "A semi-automatic shotgun. Fires 12 gauge."
+ITEM.model = "models/weapons/m1014/w_m1014.mdl"
+ITEM.class = "cw_kk_ins2_m1014"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 1
+ITEM.price = 16000
+ITEM.weight = 8

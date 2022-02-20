@@ -1,0 +1,11 @@
+ITEM.name = "PSO-1"
+ITEM.description = "A Russian made optical sight with a 4.0x magnification and delta-type crosshair."
+ITEM.category = "Optics"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.model = "models/cw2/attachments/pso.mdl"
+ITEM.slot = 1
+ITEM.weight = 2
+ITEM.price = 8500
+ITEM.isAttachment = true
+ITEM.attSearch = { "kk_ins2_po4", "md_pso1"}

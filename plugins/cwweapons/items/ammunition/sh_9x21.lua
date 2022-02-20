@@ -1,0 +1,12 @@
+ITEM.name = "9x21mm"
+ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.ammo = "9x21MM"
+ITEM.description = "A Box that contains 9x21mm"
+ITEM.category = "Ammunition"
+ITEM.ammoAmount = 150
+ITEM.isAmmo = true
+ITEM.ammoPerBox = 50
+ITEM.price = 175
+ITEM.weight = 0.044

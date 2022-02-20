@@ -1,0 +1,9 @@
+ITEM.name = "M98B"
+ITEM.description = "A bolt-action sniper rifle chambered for the 7.62x51mm round."
+ITEM.model = "models/weapons/m98/w_m98b.mdl"
+ITEM.class = "cw_kk_ins2_m98"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 67000
+ITEM.weight = 12

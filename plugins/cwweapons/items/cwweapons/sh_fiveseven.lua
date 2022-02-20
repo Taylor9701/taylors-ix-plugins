@@ -1,0 +1,9 @@
+ITEM.name = "Five-Seven"
+ITEM.description = "A polymer-framed pistol chambered for 5.7x28mm."
+ITEM.model = "models/weapons/ethereal/w_fiveseven.mdl"
+ITEM.class = "cw_kk_ins2_fiveseven"
+ITEM.weaponCategory = "secondary"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 7500
+ITEM.weight = 2

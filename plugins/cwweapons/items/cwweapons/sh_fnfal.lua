@@ -1,0 +1,9 @@
+﻿ITEM.name = "FN FAL"
+ITEM.description = "A battle rifle that fires 7.62x51mm rounds."
+ITEM.model = "models/weapons/ethereal/w_fal.mdl"
+ITEM.class = "cw_kk_ins2_fnfal"
+ITEM.weaponCategory = "primary"
+ITEM.width = 5
+ITEM.height = 2
+ITEM.price = 80000
+ITEM.weight = 8

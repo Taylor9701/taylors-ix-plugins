@@ -1,0 +1,9 @@
+ITEM.name = "HK MP5"
+ITEM.description = "A black submachinegun. Fires 9x19mm."
+ITEM.model = "models/weapons/ethereal/w_mp5a4.mdl"
+ITEM.class = "cw_kk_ins2_mp5a4"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 14000
+ITEM.weight = 6

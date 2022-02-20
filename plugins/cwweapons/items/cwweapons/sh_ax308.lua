@@ -1,0 +1,9 @@
+ITEM.name = "AX-308"
+ITEM.description = "A bolt-action sniper rifle chambered for the 7.62x51mm round."
+ITEM.model = "models/weapons/ax308/w_ax308.mdl"
+ITEM.class = "cw_kk_ins2_ax308"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 65000
+ITEM.weight = 14

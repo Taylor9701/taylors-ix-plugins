@@ -1,0 +1,9 @@
+ITEM.name = "FAMAS"
+ITEM.description = "A black bullpup assault rifle. Fires 5.56x45mm."
+ITEM.model = "models/weapons/ethereal/w_famasf1.mdl"
+ITEM.class = "cw_kk_ins2_famasf1"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 80000
+ITEM.weight = 8

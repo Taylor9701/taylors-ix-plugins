@@ -1,0 +1,9 @@
+ITEM.name = "RPK-12"
+ITEM.description = "The RPK-12 5.45×39mm squad automatic weapon is a further modernization of the RPK-74. It is expected to take over the role of the RPK-74 in the Russian Armed Forces. It is based on the traditional Kalashnikov layout and design, and also has several novel technical and ergonomic features derived from the AK-12 program."
+ITEM.model = "models/weapons/ethereal/w_rpk12.mdl"
+ITEM.class = "cw_kk_ins2_rpk12"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 75000
+ITEM.weight = 11

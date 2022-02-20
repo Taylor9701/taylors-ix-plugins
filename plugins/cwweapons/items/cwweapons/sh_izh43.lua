@@ -1,0 +1,9 @@
+ITEM.name = "IZH-43"
+ITEM.description = "A double barrel hunting shotgun, a classic Russian design popular with hunters and loners alike.\nThe cheap price and long barrel makes it useful for engaging animals and unarmed targets at ranges up to fifty meters.\nThe side-by-side barrels makes the weapon simpler built compared to the TOZ, but the sights are not aligned to both barrels.\n\nAmmo: 12 Gauge \nMagazine Capacity: 2"
+ITEM.model = "models/weapons/ethereal/w_doublebarrel.mdl"
+ITEM.class = "cw_kk_ins2_toz66"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 1
+ITEM.price = 1600
+ITEM.weight = 4

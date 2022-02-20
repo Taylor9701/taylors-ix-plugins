@@ -1,0 +1,25 @@
+ITEM.name = "Mail Anorak"
+ITEM.replacements = "models/nasca/stalker/male_anorak.mdl"
+ITEM.model = "models/stalker/outfit/rookie.mdl"
+ITEM.description = "An anorak with a vest on it."
+ITEM.longdesc = "A leather jacket with woven armour elements in common use amongst bandits and crooks. Gives some amount of protection, though is extremely inadequate in the conditions of the Zone. Fitted with reinforced armour."
+ITEM.width = 2
+ITEM.height = 2
+ITEM.price = 8800
+ITEM.flag = "a"
+ITEM.isHelmet = false
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"0"}
+ITEM.img = Material("vgui/hud/anorak.png")
+ITEM.weight = 9
+ITEM.addWeight = 7
+ITEM.res = {
+	["Bullet"] = 0.20,
+	["Blast"] = 0.20,
+	["Fall"] = 0.20,
+	["Burn"] = 0.00,
+	["Radiation"] = 0.00,
+	["Chemical"] = 0.00,
+	["Shock"] = 0.00,
+	["Psi"] = 0.00,
+}

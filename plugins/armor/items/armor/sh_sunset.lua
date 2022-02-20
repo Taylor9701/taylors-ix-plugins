@@ -1,0 +1,25 @@
+ITEM.name = "Sunset"
+ITEM.model ="models/stalker/outfit/sunrise.mdl"
+ITEM.replacements ="models/nasca/stalker/male_sunset_lone.mdl"
+ITEM.description= "A Sunset suit."
+ITEM.longdesc = "Stalker bodysuit loaded up on the best protection one can scrounge up from dead stalkers and the nearest tactical store. Despite it's appearance, it offers protection on par with military combat suits and paints it's owner as a real cut-throat."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 78100
+ITEM.flag = "c"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"3"}
+ITEM.img = Material("vgui/hud/sunrise.png")
+ITEM.weight = 12
+ITEM.addWeight = 33
+ITEM.res = {
+	["Bullet"] = 0.50,
+	["Blast"] = 0.60,
+	["Fall"] = 0.60,
+	["Burn"] = 0.50,
+	["Radiation"] = 0.20,
+	["Chemical"] = 0.20,
+	["Shock"] = 0.20,
+	["Psi"] = 0.35,
+}

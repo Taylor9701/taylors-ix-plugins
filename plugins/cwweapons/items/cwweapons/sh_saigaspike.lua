@@ -1,0 +1,9 @@
+ITEM.name = "Saiga-12 Spike"
+ITEM.description= "A semi-automatic bullpup shotgun. Fires 12 gauge."
+ITEM.model = "models/weapons/saigaspike/w_saiga_spike.mdl"
+ITEM.class = "cw_kk_ins2_saigaspike"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 30000
+ITEM.weight = 8

@@ -1,0 +1,9 @@
+ITEM.name = "AK-12u"
+ITEM.description = "The AK-12 is a Russian 5.45x39mm assault rifle designed by Kalashnikov Concern. The most modern AK-Pattern rifle, it features various upgrades over the older versions still in use across the world."
+ITEM.model = "models/weapons/ethereal/w_ak12u.mdl"
+ITEM.class = "cw_kk_ins2_ak12u"
+ITEM.weaponCategory = "primary"
+ITEM.width = 2
+ITEM.height = 2
+ITEM.price = 44000
+ITEM.weight = 7

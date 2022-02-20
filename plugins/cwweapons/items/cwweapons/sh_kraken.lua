@@ -1,0 +1,9 @@
+ITEM.name = "CDX-MC Kraken"
+ITEM.description = "A bolt-action sniper rifle chambered for the 7.62x51mm round."
+ITEM.model = "models/weapons/cdxmc/w_cdxmc.mdl"
+ITEM.class = "cw_kk_ins2_cdxmc"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 75000
+ITEM.weight = 14

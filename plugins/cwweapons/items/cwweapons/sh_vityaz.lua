@@ -1,0 +1,9 @@
+ITEM.name = "PP-19 Vityaz"
+ITEM.description = "The Vityaz-SN is a 9×19mm Parabellum submachine gun developed in 2004 by Izhmash. It is based on the AK-74 rifle and offers a high degree of parts commonality with the AK-74. It is the standard submachine gun for all branches of the Russian military and police forces."
+ITEM.model = "models/weapons/ethereal/w_vityaz.mdl"
+ITEM.class = "cw_kk_ins2_vityaz"
+ITEM.weaponCategory = "primary"
+ITEM.width = 2
+ITEM.height = 2
+ITEM.price = 14000
+ITEM.weight = 6

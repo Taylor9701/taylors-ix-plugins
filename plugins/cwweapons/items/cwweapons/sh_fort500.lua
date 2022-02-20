@@ -1,0 +1,9 @@
+ITEM.name = "Fort-500"
+ITEM.description = "The Fort-500 shotgun was developed by Scientific and Production organization Fort (NPO Fort) of the Ukrainian Ministry of Inferior. The FORT-500 shotgun was designed during late 1990s as a police / security weapon, and is in limited production and use by several Ukrainian police and security organisations."
+ITEM.model = "models/weapons/ethereal/w_fort500.mdl"
+ITEM.class = "cw_kk_ins2_fort500"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 3600
+ITEM.weight = 5

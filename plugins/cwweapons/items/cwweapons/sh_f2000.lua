@@ -1,0 +1,9 @@
+﻿ITEM.name = "FN F2000"
+ITEM.description = "A polymer-framed rifle chambered for 5.56x45mm."
+ITEM.model = "models/weapons/ethereal/w_fnf2000.mdl"
+ITEM.class = "cw_kk_ins2_fnf2000"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 56000
+ITEM.weight = 8

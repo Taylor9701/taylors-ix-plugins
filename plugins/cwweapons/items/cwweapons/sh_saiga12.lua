@@ -1,0 +1,9 @@
+ITEM.name = "Saiga-12"
+ITEM.description= "A semi-automatic shotgun. Fires 12 gauge."
+ITEM.model = "models/weapons/ethereal/w_saiga_12k.mdl"
+ITEM.class = "cw_kk_ins2_saiga12"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 22000
+ITEM.weight = 8

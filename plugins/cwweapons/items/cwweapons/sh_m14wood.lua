@@ -1,0 +1,9 @@
+ITEM.name = "M14 Wood"
+ITEM.description = "The M14 rifle, officially the United States Rifle, 7.62 mm, M14, is an American automatic rifle that fires 7.62×51mm NATO (.308 in) ammunition. It became the standard-issued rifle for the U.S. military in 1959 replacing the M1 Garand rifle in the U.S. Army by 1961 and the U.S. Marine Corps by 1965 until being replaced by the M16 rifle beginning in 1964."
+ITEM.model = "models/weapons/ethereal/w_m14_wood.mdl"
+ITEM.class = "cw_kk_ins2_m14wood"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 50000
+ITEM.weight = 11

@@ -1,0 +1,25 @@
+ITEM.name = "CS-3b"
+ITEM.model ="models/stalker/outfit/cs_heavy.mdl"
+ITEM.replacements ="models/nasca/stalker/male_cs3b.mdl"
+ITEM.description= "A CS-3b suit."
+ITEM.longdesc = "A home-made entry suit with CBRN liner, large assault vest protects torso and groin, while bodysuit protects from various hazards. Thick steel boots, theoretically, can protect from a landmine."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 92400
+ITEM.flag = "f"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"2"}
+ITEM.img = Material("vgui/hud/cs2.png")
+ITEM.weight = 20
+ITEM.addWeight = 35
+ITEM.res = {
+	["Bullet"] = 0.60,
+	["Blast"] = 0.60,
+	["Fall"] = 0.60,
+	["Burn"] = 0.50,
+	["Radiation"] = 0.50,
+	["Chemical"] = 0.50,
+	["Shock"] = 0.40,
+	["Psi"] = 0.50,
+}

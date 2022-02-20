@@ -1,0 +1,11 @@
+ITEM.name = "Nightforce NXS"
+ITEM.description = "An American made optical sight with an 8.0x magnification and a cross-type crosshair."
+ITEM.category = "Optics"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.attSearch = { "md_nightforce_nxs"}
+ITEM.model = "models/cw2/attachments/pso.mdl"
+ITEM.slot = 1
+ITEM.weight = 3
+ITEM.price = 17000
+ITEM.isAttachment = true

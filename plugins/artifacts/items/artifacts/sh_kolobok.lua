@@ -1,0 +1,14 @@
+ITEM.name = "Kolobok"
+ITEM.model = "models/nasca/etherealsrp_artifacts/kolobok.mdl"
+ITEM.description = "Very spikey artifact."
+ITEM.longdesc = "Relatively rare artifact that heals medium wounds quickly. Emits a minor amount of radiation. The skin becomes tougher, causing reduced sense of touch, continuous use can lead to loss of low motor function. [ +4 HEAL | +2 RAD ]"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.price = 64500
+ITEM.flag = "A"
+ITEM.buff = "heal"
+ITEM.buffval = 4
+ITEM.debuff = "rads"
+ITEM.debuffval = 2
+ITEM.isArtefact = true
+ITEM.weight = 2.1

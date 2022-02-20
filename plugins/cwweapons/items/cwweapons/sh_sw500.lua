@@ -1,0 +1,9 @@
+ITEM.name = "S&W .500"
+ITEM.description= "A double-action revolver chambered for .500 S&W Magnum. Compensation in a revolver package."
+ITEM.model = "models/weapons/sw500/w_sw500.mdl"
+ITEM.class = "cw_kk_ins2_sw500"
+ITEM.weaponCategory = "secondary"
+ITEM.width = 3
+ITEM.height = 1
+ITEM.price = 14000
+ITEM.weight = 3

@@ -1,0 +1,9 @@
+ITEM.name = "H&K UMP"
+ITEM.description= "A German submachine gun, firing the .45ACP cartridge."
+ITEM.model = "models/weapons/ethereal/w_ump45.mdl"
+ITEM.class = "cw_kk_ins2_ump45"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 30000
+ITEM.weight = 6

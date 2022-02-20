@@ -1,0 +1,12 @@
+ITEM.name = "5.45x39mm"
+ITEM.model = "models/Items/BoxMRounds.mdl"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.ammo = "5.45x39MM"
+ITEM.ammoAmount = 150
+ITEM.description = "Military 5.45x39 7H10 caliber is an improved piercing round for automatic rifles of Warsaw Pact countries. Provides better accuracy than the 7.62 caliber round thanks to reduced recoil and a 100 meter increase in range."
+ITEM.isAmmo = true
+ITEM.category = "Ammunition"
+ITEM.ammoPerBox = 30
+ITEM.price = 175
+ITEM.weight = 0.03

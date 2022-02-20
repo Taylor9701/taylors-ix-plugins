@@ -1,0 +1,9 @@
+ITEM.name = "Browning Hi-Power"
+ITEM.description= "A semi-automatic pistol chambered for 9x19mm."
+ITEM.model = "models/weapons/browninghp/w_browninghp.mdl"
+ITEM.class = "cw_kk_ins2_browninghp"
+ITEM.weaponCategory = "secondary"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 2200
+ITEM.weight = 2

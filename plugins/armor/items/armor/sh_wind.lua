@@ -1,0 +1,25 @@
+ITEM.name = "Wind of Freedom" 
+ITEM.model ="models/stalker/outfit/freedom_a.mdl"
+ITEM.replacements ="models/nasca/stalker/male_psz9d_free.mdl"
+ITEM.description= "A Wind of Freedom suit." 
+ITEM.longdesc = "A light stalker suit made by craftsmen not satisfied with the Sunrise suit. Care went into improving protection against anomalous hazards. A pacifist's suit, lack of body armor and careful weight management allows one to 'run like the wind' from a fight."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 23100
+ITEM.flag = "f"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"2"}
+ITEM.img = Material("vgui/hud/wind.png")
+ITEM.weight = 22
+ITEM.addWeight = 30
+ITEM.res = {
+	["Bullet"] = 0.00,
+	["Blast"] = 0.05,
+	["Fall"] = 0.05,
+	["Burn"] = 0.40,
+	["Radiation"] = 0.40,
+	["Chemical"] = 0.40,
+	["Shock"] = 0.40,
+	["Psi"] = 0.00,
+}

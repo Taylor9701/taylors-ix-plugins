@@ -1,0 +1,9 @@
+ITEM.name = "Gyurza"
+ITEM.description = "A Russian pistol that fires 9x21mm rounds."
+ITEM.model = "models/weapons/gyurza/w_gyurza.mdl"
+ITEM.class = "cw_kk_ins2_gyurza"
+ITEM.weaponCategory = "secondary"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 3000
+ITEM.weight = 2

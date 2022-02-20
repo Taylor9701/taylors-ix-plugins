@@ -1,0 +1,12 @@
+ITEM.name = "5.56x45mm"
+ITEM.model = "models/Items/BoxMRounds.mdl"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.ammo = "5.56x45MM"
+ITEM.ammoAmount = 150
+ITEM.description = "A standard-issue NATO 5.56x45 caliber round specially designed for accurate automatic fire. Provides good ballistic characteristics, having been designed on the basis of a hunting round."
+ITEM.isAmmo = true
+ITEM.category = "Ammunition"
+ITEM.ammoPerBox = 30
+ITEM.price = 450
+ITEM.weight = 0.032

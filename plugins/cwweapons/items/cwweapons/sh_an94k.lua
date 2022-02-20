@@ -1,0 +1,9 @@
+ITEM.name = "AN-94"
+ITEM.description= "A soviet-designed assault rifle chambered for 5.45x39mm"
+ITEM.model = "models/weapons/ethereal/w_abakan.mdl"
+ITEM.class = "cw_kk_ins2_abakan"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 66000
+ITEM.weight = 9

@@ -1,0 +1,24 @@
+ITEM.name = "SKAT-9M" 
+ITEM.replacements = "models/nasca/stalker/male_stingray9_lone.mdl"
+ITEM.model = "models/stalker/outfit/mili_heavy.mdl"
+ITEM.description = "Military combat armor."
+ITEM.longdesc = "This SKAT-9M bulletproof military suit is designed for assault operations in areas of anomalous activity. It includes a PSZ-12p heavy military bulletproof suit, an integrated compensation suit and a Sphere-12M helmet. It provides perfect protection from bullets and splinters and it doesn't decrease the soldier's mobility. It has a balanced system of anomaly protection."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 115500
+ITEM.flag = "d"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"0"}
+ITEM.weight = 40
+ITEM.addWeight = 33
+ITEM.res = {
+	["Bullet"] = 0.60,
+	["Blast"] = 0.60,
+	["Fall"] = 0.60,
+	["Burn"] = 0.70,
+	["Radiation"] = 0.55,
+	["Chemical"] = 0.55,
+	["Shock"] = 0.55,
+	["Psi"] = 0.50,
+}

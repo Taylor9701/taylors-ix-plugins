@@ -1,0 +1,9 @@
+ITEM.name = "ALIAS CS5"
+ITEM.description = "A bolt-action integrally suppressed sniper rifle chambered for the 7.62x51mm round."
+ITEM.model = "models/weapons/cs5/w_cs5.mdl"
+ITEM.class = "cw_kk_ins2_cs5"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 72000
+ITEM.weight = 12

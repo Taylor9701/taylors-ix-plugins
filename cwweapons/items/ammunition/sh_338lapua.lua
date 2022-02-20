@@ -1,9 +1,0 @@
-ITEM.name = ".338 Lapua"
-ITEM.model = "models/Items/BoxMRounds.mdl"
-ITEM.width = 2
-ITEM.height = 1
-ITEM.ammo = ".338 Lapua"
-ITEM.ammoAmount = 100
-ITEM.description = "The .338 Lapua Magnum is a specialized rimless bottlenecked centerfire cartridge developed for military long-range sniper rifles."
-ITEM.isAmmo = true
-ITEM.category = "Ammunition"

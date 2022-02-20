@@ -1,0 +1,9 @@
+ITEM.name = "P226r"
+ITEM.description = "The SIG Sauer P226 is a full-sized, service-type pistol made by SIG Sauer. It is chambered for the 9×19mm Parabellum, .40 S&W, .357 SIG, and .22 Long Rifle. It is essentially the same basic design of the SIG Sauer P220, but developed to use higher capacity, double stack magazines in place of the single stack magazines of the P220. These particular variants fire the 9x19mm Round."
+ITEM.model = "models/weapons/ethereal/w_p226.mdl"
+ITEM.class = "cw_kk_ins2_p226"
+ITEM.weaponCategory = "secondary"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.price = 3800
+ITEM.weight = 3

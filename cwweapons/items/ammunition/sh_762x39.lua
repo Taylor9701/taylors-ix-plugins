@@ -1,9 +1,0 @@
-ITEM.name = "7.62x39mm"
-ITEM.model = "models/Items/BoxMRounds.mdl"
-ITEM.width = 2
-ITEM.height = 1
-ITEM.ammo = "7.62x39MM"
-ITEM.ammoAmount = 100
-ITEM.description = "7.62x39 Full Metal Jacket is one the most commonly used types of ammunition, especially in Africa and in the Middle East."
-ITEM.isAmmo = true
-ITEM.category = "Ammunition"

@@ -1,0 +1,12 @@
+ITEM.name = "9x39mm"
+ITEM.model = "models/Items/BoxMRounds.mdl"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.ammo = "9x39MM"
+ITEM.ammoAmount = 150
+ITEM.description = "The SP-5 is a subsonic 9x39mm rifle round with a bimetallic casing. The round contains a steel core with a gap behind it that is filled with lead. Requires a suppressor for stealth firing. Used by special services of Warsaw Pact countries."
+ITEM.isAmmo = true
+ITEM.category = "Ammunition"
+ITEM.ammoPerBox = 30
+ITEM.price = 575
+ITEM.weight = 0.088

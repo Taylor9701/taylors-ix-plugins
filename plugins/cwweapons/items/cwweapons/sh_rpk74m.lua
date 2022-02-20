@@ -1,0 +1,9 @@
+ITEM.name = "RPK-74M"
+ITEM.description = "The RPK-74 was introduced in 1974 together with the AK-74 assault rifle and chambered for the new 5.45×39mm intermediate cartridge. It was derived from the AK-74 rifle, with modifications that mirror those made to the AKM to create the RPK. It also uses a longer and heavier chrome-plated barrel, bipod, adjusted gas channel in the gas block, and a different front sight tower."
+ITEM.model = "models/weapons/ethereal/w_f_rpk74m.mdl"
+ITEM.class = "cw_kk_ins2_rpk74m"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 50000
+ITEM.weight = 11

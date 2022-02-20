@@ -1,0 +1,9 @@
+ITEM.name = "MK18 Mod 1"
+ITEM.description = "A Close-Quarters weapon, the MK18 is a performance-built M4A1 with a shorter upper reciever and adjustable stock meant to be used by special units who have a need for reliable firepower in close to medium range engagements. This particular one has had some relatively minor QoL modifications made to it. Fires 5.56x45 Rounds."
+ITEM.model = "models/weapons/mk18mod1/w_mk18mod1.mdl"
+ITEM.class = "cw_kk_ins2_mk18mod1"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 64000
+ITEM.weight = 7

@@ -1,0 +1,9 @@
+ITEM.name = "DSR-1"
+ITEM.description = "A bolt-action bullpup sniper rifle chambered for the .338 Lapua round."
+ITEM.model = "models/weapons/dsr1/w_dsr1.mdl"
+ITEM.class = "cw_kk_ins2_dsr1"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 80000
+ITEM.weight = 13

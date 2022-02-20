@@ -1,0 +1,25 @@
+ITEM.name = "CS-2"
+ITEM.model ="models/stalker/outfit/cs_heavy.mdl"
+ITEM.replacements ="models/nasca/stalker/male_cs2.mdl"
+ITEM.description= "A CS-2 suit."
+ITEM.longdesc = "A pair of jeans, nomex jacket, with Russian class-3 vest and load bearing gear. Combined with a helmet, it is useful for low intensity conflicts within the zone. Worn by the kinds of people who'd walk far just to shoot somebody."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 56100
+ITEM.flag = "f"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"2"}
+ITEM.img = Material("vgui/hud/cs2.png")
+ITEM.weight = 15
+ITEM.addWeight = 18
+ITEM.res = {
+	["Bullet"] = 0.40,
+	["Blast"] = 0.25,
+	["Fall"] = 0.25,
+	["Burn"] = 0.30,
+	["Radiation"] = 0.45,
+	["Chemical"] = 0.45,
+	["Shock"] = 0.30,
+	["Psi"] = 0.20,
+}

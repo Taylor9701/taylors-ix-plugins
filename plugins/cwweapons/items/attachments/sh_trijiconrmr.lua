@@ -1,0 +1,11 @@
+ITEM.name = "Trijicon RMR"
+ITEM.description = "Tiny holographic sight for pistols. Dot type sight."
+ITEM.category = "Sights"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.attSearch = { "md_rmr",}
+ITEM.model = "models/cw2/attachments/microt1.mdl"
+ITEM.slot = 1
+ITEM.weight = 1
+ITEM.price = 9500
+ITEM.isAttachment = true

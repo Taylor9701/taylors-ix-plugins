@@ -1,0 +1,9 @@
+ITEM.name = "AEK-971"
+ITEM.description= "The AEK-971 is an experimental assault rifle released around the same time as the AN-94 'Abakan'. The AN-94 was chosen over it, but it was still put into limited production. It has a built-in recoil compensator, meaning its recoil is felt much less by the user. It's a rare specimen since it was only given out to a few select groups of the military."
+ITEM.model = "models/weapons/aek971/w_aek971.mdl"
+ITEM.class = "cw_kk_ins2_aek971"
+ITEM.weaponCategory = "primary" 
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 55000
+ITEM.weight = 8

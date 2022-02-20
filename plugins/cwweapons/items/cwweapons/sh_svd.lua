@@ -1,0 +1,9 @@
+ITEM.name = "Dragunov SVD"
+ITEM.description = "A sharpshooter rifle based on the AK. Fires 7.62x54mm."
+ITEM.model = "models/weapons/ethereal/w_svd.mdl"
+ITEM.class = "cw_kk_ins2_svd"
+ITEM.weaponCategory = "primary"
+ITEM.width = 6
+ITEM.height = 2
+ITEM.price = 45000
+ITEM.weight = 12

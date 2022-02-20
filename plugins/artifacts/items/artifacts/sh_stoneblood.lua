@@ -1,0 +1,22 @@
+ITEM.name = "Stoneblood"
+ITEM.model ="models/nasca/etherealsrp_artifacts/stoneblood.mdl"
+ITEM.description = "Red and green artifact."
+ITEM.longdesc = "Emits a minor amount of radiation and hardens the user’s skin, causing calluses to form and provides chemical protection. [ +1 CHEM | +1 RAD ]"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.price = 2900
+ITEM.flag = "A"
+ITEM.debuff = "rads"
+ITEM.debuffval = 1
+ITEM.isArtefact = true
+ITEM.res = {
+	["Fall"] = 0.00,
+	["Blast"] = 0.00,
+	["Bullet"] = 0.00,
+	["Shock"] = 0.00,
+	["Burn"] = 0.00,
+	["Radiation"] = 0.00,
+	["Chemical"] = 0.01,
+	["Psi"] = 0.00,
+}
+ITEM.weight = 1.4

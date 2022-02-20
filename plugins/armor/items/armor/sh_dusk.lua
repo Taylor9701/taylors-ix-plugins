@@ -1,0 +1,25 @@
+ITEM.name = "Dusk"
+ITEM.model ="models/stalker/outfit/sunrise.mdl"
+ITEM.replacements ="models/nasca/stalker/male_dusk_lone.mdl"
+ITEM.description= "A Dusk suit."
+ITEM.longdesc = "This upgraded Sunrise suit has been equipped with a reinforced kevlar vest and durable knee and shoulder pads."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 39600
+ITEM.flag = "b"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"2"}
+ITEM.img = Material("vgui/hud/sunrise.png")
+ITEM.weight = 14
+ITEM.weight = 13
+ITEM.res = {
+	["Bullet"] = 0.40,
+	["Blast"] = 0.40,
+	["Fall"] = 0.40,
+	["Burn"] = 0.20,
+	["Radiation"] = 0.20,
+	["Chemical"] = 0.20,
+	["Shock"] = 0.20,
+	["Psi"] = 0.00,
+}

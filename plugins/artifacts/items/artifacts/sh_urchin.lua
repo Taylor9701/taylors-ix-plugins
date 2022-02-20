@@ -1,0 +1,12 @@
+ITEM.name = "Urchin"
+ITEM.model ="models/nasca/etherealsrp_artifacts/urchin.mdl"
+ITEM.description = "Spikey and brown artifact."
+ITEM.longdesc = "This artifact causes an increase in blood pressure, and in doing so removes radiation from the body at the same time. [ -3 RAD ]"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.price = 22500
+ITEM.flag = "A"
+ITEM.buff = "antirad"
+ITEM.buffval = 3
+ITEM.isArtefact = true
+ITEM.weight = 1.4

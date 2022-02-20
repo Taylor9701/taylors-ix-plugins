@@ -1,0 +1,9 @@
+ITEM.name = "SV-98"
+ITEM.description= "A Russian sniper rifle. Fires 7.62x54mm."
+ITEM.model = "models/weapons/ethereal/w_sv98b.mdl"
+ITEM.class = "cw_kk_ins2_sv98b"
+ITEM.weaponCategory = "primary"
+ITEM.width = 6
+ITEM.height = 2
+ITEM.price = 43250
+ITEM.weight = 17

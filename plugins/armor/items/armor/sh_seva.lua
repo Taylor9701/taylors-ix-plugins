@@ -1,0 +1,26 @@
+ITEM.name = "SEVA"
+ITEM.model ="models/stalker/outfit/lone_seva.mdl"
+ITEM.replacements ="models/nasca/stalker/male_seva_lone.mdl"
+ITEM.description= "A SEVA suit."
+ITEM.longdesc = "This suit was produced by one of Kiev's Defence Research institutes and represents a phenomenal alternative to stalker hand-made suits. It is an excellent combination of a bulletproof vest, a closed cycle breathing system and an integrated system of anomalous field suppression. Due to the perfect choice of materials, the suit is highly efficient and is often regarded as a good choice for veterans."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 83600
+ITEM.flag = "c"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.overlayPath = "vgui/overlays/hud_sci"
+ITEM.artifactcontainers = {"2"}
+ITEM.img = Material("vgui/hud/seva.png")
+ITEM.weight = 30
+ITEM.addWeight = 40
+ITEM.res = {
+	["Bullet"] = 0.40,
+	["Blast"] = 0.20,
+	["Fall"] = 0.20,
+	["Burn"] = 0.70,
+	["Radiation"] = 0.70,
+	["Chemical"] = 0.70,
+	["Shock"] = 0.70,
+	["Psi"] = 0.60,
+}

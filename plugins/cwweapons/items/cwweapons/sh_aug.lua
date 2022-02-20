@@ -1,0 +1,9 @@
+ITEM.name = "Steyr AUG"
+ITEM.description= "A bullpup assault rifle. Fires 5.56x45mm."
+ITEM.model = "models/weapons/ethereal/w_aug.mdl"
+ITEM.class = "cw_kk_ins2_aug"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 54000
+ITEM.weight = 8

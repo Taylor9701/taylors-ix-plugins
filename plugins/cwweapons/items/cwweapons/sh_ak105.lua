@@ -1,0 +1,9 @@
+ITEM.name = "AK-105"
+ITEM.description = "The AK-105 is a shortened carbine version of the AK-74M rifle, which in turn was derived from the original AK-47 design and its AK-74 successor. The AK-102, AK-104, and AK-105 are very similar in design, the only difference being the caliber and corresponding magazine type. The AK-105 is chambered to fire 5.45×39mm ammunition"
+ITEM.model = "models/weapons/ethereal/w_f_ak105.mdl"
+ITEM.class = "cw_kk_ins2_ak105"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 33500
+ITEM.weight = 7

@@ -1,0 +1,12 @@
+ITEM.name = "Wrenched"
+ITEM.model ="models/nasca/etherealsrp_artifacts/wrenched.mdl"
+ITEM.description = "Bizarre, whalelike artifact."
+ITEM.longdesc = "Acts as a sponge that absorbs nearby radiation. Slightly weaker than the Bubble. [ -4 RAD ]"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.price = 26500
+ITEM.flag = "A"
+ITEM.buff = "antirad"
+ITEM.buffval = 4
+ITEM.isArtefact = true
+ITEM.weight = 2.3

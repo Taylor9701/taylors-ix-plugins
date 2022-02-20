@@ -1,0 +1,9 @@
+ITEM.name = "Tokarev TT-33"
+ITEM.description = "An old semi-automatic handgun. Fires 7.62x25mm."
+ITEM.model = "models/weapons/ethereal/w_tokarev.mdl"
+ITEM.class = "cw_kk_ins2_tokarev"
+ITEM.weaponCategory = "secondary"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 1150
+ITEM.weight = 3

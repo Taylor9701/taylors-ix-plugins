@@ -1,0 +1,9 @@
+ITEM.name = "SIG MPX"
+ITEM.description = "A fully automatic submachinegun. Fires 9x19mm rounds."
+ITEM.model = "models/weapons/mpx/w_mpx.mdl"
+ITEM.class = "cw_kk_ins2_mpx"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 1
+ITEM.price = 21500
+ITEM.weight = 7

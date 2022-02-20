@@ -1,0 +1,25 @@
+ITEM.name = "Gagarin" 
+ITEM.model = "models/stalker/outfit/mili_heavy.mdl"
+ITEM.replacements = "models/nasca/stalker/male_gagarin.mdl"
+ITEM.description= "A Gagarin Suit." 
+ITEM.longdesc = "A prototype suit intended for use by the military, seemingly an attempt to militarize the SEVA. PSZ-12 protective vest is of high quality, but the rest of the armor had to be downsized to keep the system's weight in check. It is a mystery how it ended up in the zone."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 101200
+ITEM.flag = "f"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"2"}
+ITEM.img = Material("vgui/hud/berill7.png")
+ITEM.weight = 40
+ITEM.addWeight = 40
+ITEM.res = {
+	["Bullet"] = 0.50,
+	["Blast"] = 0.50,
+	["Fall"] = 0.50,
+	["Burn"] = 0.60,
+	["Radiation"] = 0.60,
+	["Chemical"] = 0.60,
+	["Shock"] = 0.60,
+	["Psi"] = 0.60,
+}

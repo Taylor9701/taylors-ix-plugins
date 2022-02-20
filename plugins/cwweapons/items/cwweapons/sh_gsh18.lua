@@ -1,0 +1,9 @@
+ITEM.name = "GSH-18"
+ITEM.description = "A Russian pistol that fires 9x19mm rounds."
+ITEM.model = "models/weapons/gsh18/w_gsh18.mdl"
+ITEM.class = "cw_kk_ins2_gsh18"
+ITEM.weaponCategory = "secondary"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 2800
+ITEM.weight = 1

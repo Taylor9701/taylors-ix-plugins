@@ -1,0 +1,9 @@
+ITEM.name = "Typhoon 12"
+ITEM.description= "A semi-automatic drum-fed shotgun. Fires 12 gauge."
+ITEM.model = "models/weapons/typhoon12/w_typhoon12.mdl"
+ITEM.class = "cw_kk_ins2_typhoon12"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 24000
+ITEM.weight = 8

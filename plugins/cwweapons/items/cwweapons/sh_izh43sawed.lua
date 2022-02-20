@@ -1,0 +1,9 @@
+ITEM.name = "Sawed Off IZH-43"
+ITEM.description = "The TOZ-66 is a double barrel, breech-loading shotgun built primarily for hunting small to medium game. It has seen extensive use in The Zone due to its high availability and exceptional durability and simplicity. Fires 12 Gauge Shells. This particular one has had the barrels shortened significantly, resulting in higher recoil but easier use in close quarters. Brace for impact."
+ITEM.model = "models/weapons/ethereal/w_sawnoff_db.mdl"
+ITEM.class = "cw_kk_ins2_toz66_sawed"
+ITEM.weaponCategory = "primary"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 1150
+ITEM.weight = 2

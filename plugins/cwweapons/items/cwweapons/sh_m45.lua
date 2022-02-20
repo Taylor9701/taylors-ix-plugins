@@ -1,0 +1,9 @@
+ITEM.name = "M45"
+ITEM.description = "The M45 MEUSOC is a magazine-fed, recoil-operated, single-action, semiautomatic pistol chambered for the .45 ACP cartridge. It's a variant of the M1911, and has been the standard-issue side arm for the Force Recon Element of the United States Marine Corps' Marine Expeditionary Units since 1985."
+ITEM.model = "models/weapons/ethereal/w_m45.mdl"
+ITEM.class = "cw_kk_ins2_m45"
+ITEM.weaponCategory = "secondary"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.price = 5700
+ITEM.weight = 3

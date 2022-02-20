@@ -1,0 +1,25 @@
+ITEM.name = "Defender of Freedom" 
+ITEM.replacements = "models/nasca/stalker/male_berill5m_lone.mdl"
+ITEM.model = "models/stalker/outfit/military.mdl"
+ITEM.description= "A Defender of Freedom suit." 
+ITEM.longdesc = "This item comprises an early PS-5 body suit with beryllium sputter and military armored vest. Designed for assault operations in highly radioactive areas, it is ineffective in areas of high anomalous activity. The suit was modified by Freedom to increase resistance to anomalies."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 82500
+ITEM.flag = "f"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"1"}
+ITEM.weight = 27
+ITEM.addWeight = 35
+ITEM.res = {
+	["Bullet"] = 0.50,
+	["Blast"] = 0.40,
+	["Fall"] = 0.40,
+	["Burn"] = 0.40,
+	["Radiation"] = 0.55,
+	["Chemical"] = 0.55,
+	["Shock"] = 0.55,
+	["Psi"] = 0.40,
+}
+-- ITEM.noBusiness = true

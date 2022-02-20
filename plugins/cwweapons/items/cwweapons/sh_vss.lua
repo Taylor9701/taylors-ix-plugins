@@ -1,0 +1,9 @@
+ITEM.name = "VSS Vintorez"
+ITEM.description= "The VSS 'Vintorez' is issued primarily to Spetsnaz units for undercover or clandestine operations, a role made evident by its ability to be stripped down for transport in a specially fitted briefcase.\nThe weapon has an integral suppressor which wraps around the barrel.\nThe barrel itself has a series of small ports drilled in the rifling grooves, leading into the suppressor which slows and cools the exhaust gases.\nIt uses a subsonic 9x39 mm SP-5 cartridge to avoid a sonic boom.\n\nAmmo: 9x39mm\nMagazine Capacity: 20"
+ITEM.model = "models/weapons/ethereal/w_vss.mdl"
+ITEM.class = "cw_kk_ins2_vss"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 30000
+ITEM.weight = 10

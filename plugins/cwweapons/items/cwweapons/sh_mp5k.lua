@@ -1,0 +1,9 @@
+ITEM.name = "MP5k"
+ITEM.description= "A small, black submachinegun. Fires 9x19mm."
+ITEM.model = "models/weapons/ethereal/w_mp5k.mdl"
+ITEM.class = "cw_kk_ins2_mp5k"
+ITEM.weaponCategory = "primary"
+ITEM.width = 2
+ITEM.height = 2
+ITEM.price = 12000
+ITEM.weight = 6

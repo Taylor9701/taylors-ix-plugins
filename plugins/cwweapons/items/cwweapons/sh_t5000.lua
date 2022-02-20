@@ -1,0 +1,9 @@
+ITEM.name = "Orsis T-5000"
+ITEM.description = "A bolt-action sniper rifle chambered for the 7.62x51mm round."
+ITEM.model = "models/weapons/t5000/w_t5000.mdl"
+ITEM.class = "cw_kk_ins2_t5000"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 81000
+ITEM.weight = 14

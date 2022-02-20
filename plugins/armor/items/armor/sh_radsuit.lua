@@ -1,0 +1,25 @@
+ITEM.name = "Radsuit"
+ITEM.model ="models/stalker/outfit/lone_exo.mdl"
+ITEM.replacements ="models/nasca/stalker/male_exo_lone.mdl"
+ITEM.description= "A Radsuit."
+ITEM.longdesc = "A competently made western entry-man suit worn for high risk assaults. Bodysuit reinforced with plates can stop some assault rifle bullets, while heavy assault vest stops most ballistic threats on the battlefield. It's heavy weight makes it most useful in close quarters and a liability in open spaces."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 114400
+ITEM.flag = "d"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"1"}
+ITEM.img = Material("vgui/hud/radsuit.png")
+ITEM.weight = 40
+ITEM.addWeight = 40
+ITEM.res = {
+	["Bullet"] = 0.80,
+	["Blast"] = 0.80,
+	["Fall"] = 0.80,
+	["Burn"] = 0.70,
+	["Radiation"] = 0.50,
+	["Chemical"] = 0.40,
+	["Shock"] = 0.40,
+	["Psi"] = 0.40,
+}

@@ -1,0 +1,25 @@
+ITEM.name = "PS5-M" 
+ITEM.model ="models/stalker/outfit/dolg.mdl"
+ITEM.replacements ="models/nasca/stalker/male_psz9d_duty.mdl"
+ITEM.description= "PS5-M Universal Protection Suit." 
+ITEM.longdesc = "This modern version of the Duty bodysuit is better suited for stalker recruits who are used to lightweight suits. Unlike the SKAT series, the suit provides reasonable protection against anomalies while also being capable of stopping a pistol bullet."
+ITEM.width = 2
+ITEM.height = 3
+ITEM.price = 47300
+ITEM.flag = "f"
+ITEM.isHelmet = true
+ITEM.isGasmask = true
+ITEM.artifactcontainers = {"1"}
+ITEM.img = Material("vgui/hud/ps5m.png")
+ITEM.weight = 24
+ITEM.addWeight = 20
+ITEM.res = {
+	["Bullet"] = 0.40,
+	["Blast"] = 0.50,
+	["Fall"] = 0.50,
+	["Burn"] = 0.25,
+	["Radiation"] = 0.20,
+	["Chemical"] = 0.40,
+	["Shock"] = 0.20,
+	["Psi"] = 0.00,
+}

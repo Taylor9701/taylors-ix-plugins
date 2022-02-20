@@ -1,0 +1,10 @@
+ITEM.name = ".500 Magnum"
+ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.ammo = ".500"
+ITEM.ammoAmount = 150
+ITEM.description = "The .500 Magnum is a very large caliber handgun cartridge."
+ITEM.isAmmo = true
+ITEM.category = "Ammunition"
+ITEM.ammoPerBox = 30
+ITEM.price = 500
+ITEM.weight = 0.22

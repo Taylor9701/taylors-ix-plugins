@@ -1,0 +1,9 @@
+ITEM.name = "AA-12"
+ITEM.description= "An automatic drum-fed shotgun. Fires 12 gauge."
+ITEM.model = "models/weapons/aa12/w_aa12.mdl"
+ITEM.class = "cw_kk_ins2_aa12"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 1
+ITEM.price = 35000
+ITEM.weight = 16

@@ -1,0 +1,9 @@
+ITEM.name = "HK416"
+ITEM.description = "Although its design is in large part based on the AR-15 class of weapons, specifically the Colt M4 carbine family issued to the U.S. military, it uses an HK-proprietary short-stroke gas piston system originally derived from the ArmaLite AR-18 (the same system was also used in Heckler & Koch's earlier G36 family of rifles)."
+ITEM.model = "models/weapons/ethereal/w_hk416.mdl"
+ITEM.class = "cw_kk_ins2_hk416"
+ITEM.weaponCategory = "primary"
+ITEM.width = 3
+ITEM.height = 2
+ITEM.price = 59000
+ITEM.weight = 8

@@ -1,0 +1,9 @@
+ITEM.name = "LR-300"
+ITEM.description= "A modern assault rifle. Fires 5.56x45mm, but faster."
+ITEM.model = "models/weapons/ethereal/w_lr300.mdl"
+ITEM.class = "cw_kk_ins2_lr300"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 38000
+ITEM.weight = 7

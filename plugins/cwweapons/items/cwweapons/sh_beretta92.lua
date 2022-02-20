@@ -1,0 +1,9 @@
+ITEM.name = "Beretta 92"
+ITEM.description= "The Beretta 92, also known as the M9, is the Italian-made replacement for the M1911 pistol in the American army.\n\nAmmo: 9x19mm\nMagazine Capacity: 15"
+ITEM.model = "models/weapons/ethereal/w_m9.mdl"
+ITEM.class = "cw_kk_ins2_m9"
+ITEM.weaponCategory = "secondary"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 2500
+ITEM.weight = 3

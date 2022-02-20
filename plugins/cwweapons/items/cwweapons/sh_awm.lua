@@ -1,0 +1,9 @@
+ITEM.name = "AWM"
+ITEM.description = "A bolt-action sniper rifle chambered for the .338 Lapua round."
+ITEM.model = "models/weapons/awm/w_awm.mdl"
+ITEM.class = "cw_kk_ins2_awm"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 2
+ITEM.price = 79000
+ITEM.weight = 15

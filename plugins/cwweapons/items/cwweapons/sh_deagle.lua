@@ -1,0 +1,9 @@
+ITEM.name = "IMI Desert Eagle"
+ITEM.description = "The IMI Desert Eagle is a semi-automatic handgun notable for chambering the largest centerfire cartridge of any magazine fed, self-loading pistol. It has a unique design with a triangular barrel and large muzzle.\n\nAmmo: .50AE\nMagazine Capacity: 7"
+ITEM.model = "models/weapons/ethereal/w_deagle.mdl"
+ITEM.class = "cw_kk_ins2_deagle"
+ITEM.weaponCategory = "secondary"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 11000
+ITEM.weight = 5

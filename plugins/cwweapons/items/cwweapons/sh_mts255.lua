@@ -1,0 +1,9 @@
+ITEM.name = "MTs-255 Revolver Shotgun"
+ITEM.description= "A double-action revolver shotgun. Fires 12 gauge."
+ITEM.model = "models/weapons/mc255/w_mc255.mdl"
+ITEM.class = "cw_kk_ins2_mts255"
+ITEM.weaponCategory = "primary"
+ITEM.width = 4
+ITEM.height = 1
+ITEM.price = 16500
+ITEM.weight = 12
