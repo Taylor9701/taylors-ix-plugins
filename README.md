@@ -41,3 +41,6 @@ Additional notes and comments are included in each plugin in various files for v
 A lot of the more difficult code here in the Rankings and Upgrades UIs were not meant for public release originally, essentially a "my eyes only" situation. As such they are not commented well and are not meant to be legible to others in that manner. Apologies for any difficulties this creates.
 
 I do not have the time to assist in any implementations or installations. Bugs should be reported here, please provide as much context as possible.
+
+## Unsupported Plugins
+As the folder name describes. Currently I only have the heavily modified Attributes plugin there. It is an EXAMPLE of how to implement complicated rolling systems and automating certain turn-based RPG mechanics, like a tabletop style attack system. This one was originally written by Verne but massive changed over time to be something very, very different from what he originally wrote before I took over programming at that community.
