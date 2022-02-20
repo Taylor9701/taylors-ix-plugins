@@ -1,0 +1,11 @@
+ITEM.name = "Heart"
+ITEM.description = "A layered formation of pins"
+ITEM.longdesc = "Artifact with a bizarre formation. Its core resembles a human heart, and has no useful properties. It's not radioactive, but is considered valuable to collectors."
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/ear.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 0.9
+ITEM.isArtefact = true
+ITEM.price = 3150
+ITEM.flag = "A"

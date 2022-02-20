@@ -1,0 +1,21 @@
+ITEM.name = "Cocoon"
+ITEM.description = "A webbed pyramid"
+ITEM.longdesc = "A formation of gravitational nature. Has the texture of rope causes user's skin to and muscles to tighten. Long periods of use have shown to lead to exhaustion, but it seems to help protect the user from assault. [ +2 IMP | -5 END ]"
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/cocon.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 0.6
+ITEM.isArtefact = true
+ITEM.price = 5750
+ITEM.res = {
+	["Fall"] = 0.02,
+	["Blast"] = 0.00,
+	["Bullet"] = 0.00,
+	["Shock"] = 0.00,
+	["Burn"] = 0.00,
+	["Radiation"] = 0.00,
+	["Chemical"] = 0.00,
+	["Psi"] = 0.00,
+}
+ITEM.flag = "A"

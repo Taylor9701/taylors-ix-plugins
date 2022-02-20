@@ -1,0 +1,23 @@
+ITEM.name = "Phantom Star"
+ITEM.description = "A cluster formation"
+ITEM.longdesc = "The Phantom Star is a dark and almost transparent cluster that seems to pulsate within the user's hands. It seems to delay the transmission of light that passes through it, and at the same time nullifies psy interference in a large radius. However it seems this effect causes the users blood pressure to rise and pressure to form in the skull. Continous use causes fainting and in long term exposure, some medical observers state an aneurysm may occur. [ +6 PSY, +4 IMP | -5 WH, +3 RAD ]"
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/phantom_star.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 1.1
+ITEM.debuff = "rads"
+ITEM.debuffval = 3
+ITEM.isArtefact = true
+ITEM.price = 35000
+ITEM.res = {
+	["Fall"] = 0.04,
+	["Blast"] = 0.00,
+	["Bullet"] = 0.00,
+	["Shock"] = 0.04,
+	["Burn"] = 0.00,
+	["Radiation"] = 0.00,
+	["Chemical"] = 0.00,
+	["Psi"] = 0.06,
+}
+ITEM.flag = "A"

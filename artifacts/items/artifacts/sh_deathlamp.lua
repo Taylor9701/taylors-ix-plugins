@@ -1,0 +1,23 @@
+ITEM.name = "Death Lamp"
+ITEM.description = "A foreboding red disk"
+ITEM.longdesc = "'Big, red, and cursed' is how the populace describe this artifact. While some refer to it as the 'Seed of Satan'. Many traders believe the rumors surrounding the artifact, thus refusing to buy it. Little is known about its origins, and nothing of value has been discovered so far. The only notable detail is that the few who've encountered this artifact have either gone missing shortly afterwards, been found dead with ghastly expressions, or received nightmares and hallucinations for weeks after witnessing it. [ -20 PSY, +7 RAD ]"
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/yoyo.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 3
+ITEM.debuff = "rads"
+ITEM.debuffval = 7
+ITEM.isArtefact = true
+ITEM.price = 92000
+ITEM.res = {
+	["Fall"] = 0.00,
+	["Blast"] = 0.00,
+	["Bullet"] = 0.00,
+	["Shock"] = 0.00,
+	["Burn"] = 0.00,
+	["Radiation"] = 0.00,
+	["Chemical"] = 0.00,
+	["Psi"] = -0.2,
+}
+ITEM.flag = "A"

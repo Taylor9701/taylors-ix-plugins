@@ -1,0 +1,10 @@
+ITEM.name = "Crown"
+ITEM.description = "The Crown (or Wreath) is an incredibly uncommon artifact that has been occasionally recovered from psi anomalies. Scientists are uncertain as to how, but Crown seems to be able to exert limited commands upon mutants when it is worn by a stalker. Unfortunately, the artifact tends to crumple into dust upon multiple uses, and scientists are unable to regularly get their hands on them."
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/lighthouse.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 3
+ITEM.isArtefact = true
+ITEM.price = 95000
+ITEM.flag = "A"

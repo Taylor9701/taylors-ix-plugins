@@ -1,0 +1,11 @@
+ITEM.name = "Ball"
+ITEM.description = "A stone-like ball."
+ITEM.longdesc = "There is no data on the conditions under which this round artifact is formed, hence the name, but practice shows that it is most often found in places of increased electrical activity. Very agile and bouncy artifact. Has no useful properties and is not radioactive."
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/ball.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 2
+ITEM.isArtefact = true
+ITEM.price = 650
+ITEM.flag = "A"

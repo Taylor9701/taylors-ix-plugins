@@ -1,0 +1,10 @@
+ITEM.name = "Blackout"
+ITEM.description = "A glowing artifact in the shape of an orb. The Blackout artifact glows a dull red, and ‘eats’ light nearby, removing it and rendering the nearby area almost pitch black, save for the small light emitted by it. Functions locally, as in if within a particular room, it will not pass through walls and absorb light from without, only from within an area. It will function up to a radius of 10ft. It also completely disables any NVGs within the area. [ +30 RAD ]"
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/dragon_eye.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 3.5
+ITEM.isArtefact = true
+ITEM.price = 58750
+ITEM.flag = "A"

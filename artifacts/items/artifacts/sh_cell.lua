@@ -1,0 +1,13 @@
+ITEM.name = "Cell"
+ITEM.description = "A hollow yet solid orb."
+ITEM.longdesc = "An artifact of gravitational nature. Users believe it to be useless, yet those that pack lightly notice feeling lighter. Not radioactive. [ +2kg WEIGHT ]"
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/cell.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 0.2
+ITEM.buff = "weight"
+ITEM.buffval = 2
+ITEM.isArtefact = true
+ITEM.price = 1100
+ITEM.flag = "A"

@@ -1,0 +1,12 @@
+ITEM.name = "Generator"
+ITEM.description = "Effectively a miniature nuclear reactor without the fear of a melt down, this artifact can only be utilized in an especially made conductor that contains its energy and radiation. Being a suitable replacement for a portable generator to power a building. [ +30 RAD ]"
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/generator.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 5
+ITEM.isArtefact = true
+ITEM.price = 61000
+ITEM.flag = "A"
+ITEM.debuff = "rads"
+ITEM.debuffval = 30

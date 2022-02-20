@@ -1,0 +1,23 @@
+ITEM.name = "Itcher"
+ITEM.description = "A cluster formation"
+ITEM.longdesc = "Consists of two separated layers. The surface is a hard, dense metamorphic rock with deep scars covering the entire body. Completely inactive and doesn't hold any noticeable properties. On the inside, a soft, yellow glowing core with an unknown organic compound. It actively consumes excessive heat and remains cool, however the skin reacts more adversely to caustic substance. [ +4 BURN, +2 IMP | -2 CHEM, +2 RAD ]"
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/fountain.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 1.1
+ITEM.debuff = "rads"
+ITEM.debuffval = 2
+ITEM.isArtefact = true
+ITEM.price = 44000
+ITEM.res = {
+	["Fall"] = 0.02,
+	["Blast"] = 0.00,
+	["Bullet"] = 0.00,
+	["Shock"] = 0.00,
+	["Burn"] = 0.04,
+	["Radiation"] = 0.00,
+	["Chemical"] = -0.02,
+	["Psi"] = 0.00,
+}
+ITEM.flag = "A"

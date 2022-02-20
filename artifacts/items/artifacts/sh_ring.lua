@@ -1,0 +1,23 @@
+ITEM.name = "Ring"
+ITEM.description = "A dual-ring formation"
+ITEM.longdesc = "A very small artifact of found rarely from clusters of electrical anomalies. The outer ring has a high-conductivity and absorbs electrical current from nearby sources, quickly grounding it in the inner ring. This causes the inner ring to spin, more energy causes a faster cycle. It's been noted that the ring is flammable and prolonged or enhanced exposure to eletricity may cause it to ignite. [ +4 SHOCK, +2 STAM | +4 RAD ]"
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/medalion.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 0.7
+ITEM.debuff = "rads"
+ITEM.debuffval = 4
+ITEM.isArtefact = true
+ITEM.price = 29000
+ITEM.res = {
+	["Fall"] = 0.00,
+	["Blast"] = 0.00,
+	["Bullet"] = 0.00,
+	["Shock"] = 0.04,
+	["Burn"] = 0.00,
+	["Radiation"] = 0.00,
+	["Chemical"] = 0.00,
+	["Psi"] = 0.02,
+}
+ITEM.flag = "A"

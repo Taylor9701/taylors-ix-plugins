@@ -1,0 +1,9 @@
+ITEM.name = "7.62x51mm"
+ITEM.model = "models/Items/BoxMRounds.mdl"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.ammo = "7.62x51MM"
+ITEM.ammoAmount = 100
+ITEM.description= "The 7.62x51 NATO round is a military variant of the .308 round which was used as a standard-issue by the NATO forces until 5.56 ammunition was introduced in the '70s in the Vietnam War."
+ITEM.isAmmo = true
+ITEM.category = "Ammunition"

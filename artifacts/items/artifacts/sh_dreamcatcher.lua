@@ -1,0 +1,11 @@
+ITEM.name = "Dreamcatcher"
+ITEM.description = "A course and rough statuette."
+ITEM.longdesc = "Stalkers claim that whenever they have it with them, they don’t have nightmares and often experience a good night’s sleep. It emits no radiation. On the negative side, it makes Stalkers oversleep, which in turn makes them rather groggy early on in their day."
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/black_angel.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 1.2
+ITEM.isArtefact = true;
+ITEM.price = 1500
+ITEM.flag = "A"

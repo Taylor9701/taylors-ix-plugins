@@ -1,0 +1,10 @@
+ITEM.name = "Lamplight"
+ITEM.description = "This artifact is considered uncommon in rarity, however, it is worth very little due to the fact it is just short of being useless. It’s properties are simple - when set or held upright, the Lamplight emits a gentle light, comparable to a normal candle. When no longer upright, the Lamplight stops emitting this light."
+ITEM.category = "Artifacts"
+ITEM.model = "models/artefacts/grapes.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.weight = 0.4
+ITEM.isArtefact = true
+ITEM.price = 850
+ITEM.flag = "A"

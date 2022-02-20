@@ -1,0 +1,10 @@
+ITEM.name = "12g Buckshot"
+ITEM.model = "models/Items/BoxBuckshot.mdl"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.ammo = "12 Gauge"
+ITEM.ammoAmount = 50
+ITEM.description = "Standard 12 gauge shell filled with 6 mm shot. Highly lethal at close range. Only suitable for use with smoothbore weapons."
+ITEM.weight = 0.045
+ITEM.isAmmo = true
+ITEM.category = "Ammunition"
