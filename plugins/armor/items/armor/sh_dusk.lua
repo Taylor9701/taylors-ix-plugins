@@ -11,7 +11,6 @@ ITEM.isHelmet = true
 ITEM.isGasmask = true
 ITEM.artifactcontainers = {"2"}
 ITEM.img = Material("vgui/hud/sunrise.png")
-ITEM.weight = 14
 ITEM.weight = 13
 ITEM.res = {
 	["Bullet"] = 0.40,

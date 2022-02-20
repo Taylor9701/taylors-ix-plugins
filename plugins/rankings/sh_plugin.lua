@@ -902,7 +902,7 @@ end
 
 --[[
 The below code was originally written by Verne, known currently for the Call Of The Zone schema.
-I've made some small changes to it, and the above code depends on his to function properly.
+I've made some changes to it, and the above code depends on this to function properly.
 --]]
 
 PLUGIN.repDefs = {

@@ -1,5 +1,5 @@
 PLUGIN.name = "PDA chatting system"
-PLUGIN.author = "verne & taylor"
+PLUGIN.author = "Verne & Taylor"
 PLUGIN.description = "PDA chatting system, supporting avatars and nicknames"
 
 ix.chat.Register("gpda", {

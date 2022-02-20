@@ -13,7 +13,6 @@ ITEM.overlayPath = "vgui/overlays/hud_sci"
 ITEM.artifactcontainers = {"2"}
 ITEM.img = Material("vgui/hud/seva.png")
 ITEM.weight = 30
-ITEM.addWeight = 40
 ITEM.res = {
 	["Bullet"] = 0.40,
 	["Blast"] = 0.20,

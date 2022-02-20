@@ -71,9 +71,6 @@ if (SERVER) then
 					bpBuff = backpacks[y.name]
 				end
 			end
-			if y.addWeight and y:GetData("equip", false) then
-				maxweight = maxweight + y.addWeight
-			end
 		end
 		
 		
@@ -110,9 +107,6 @@ function PLUGIN:CanPlayerTakeItem(client, itemEnt)
 			if bpBuff < backpacks[y.name] then
 				bpBuff = backpacks[y.name]
 			end
-		end
-		if y.addWeight and y:GetData("equip", false) then
-			maxweight = maxweight + y.addWeight
 		end
 	end
 	
@@ -174,9 +168,6 @@ function PLUGIN:PlayerInteractItem(client, action, item)
 				bpBuff = backpacks[y.name]
 			end
 		end
-		if y.addWeight and y:GetData("equip", false) then
-			maxweight = maxweight + y.addWeight
-		end
 	end
 	
 	if action == "take" then
@@ -194,14 +185,6 @@ function PLUGIN:PlayerInteractItem(client, action, item)
 			else
 				totweight = (totweight - item.weight)
 			end
-		end
-	elseif action == "Equip" then
-		if item.addWeight then
-			maxweight = maxweight + item.addWeight
-		end
-	elseif action == "EquipUn" then
-		if item.addWeight then
-			maxweight = maxweight - item.addWeight
 		end
 	end
 	
