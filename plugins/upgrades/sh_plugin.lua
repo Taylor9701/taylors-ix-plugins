@@ -1,5 +1,5 @@
 PLUGIN.name = "Upgrades"
-PLUGIN.author = "Lt. Taylor"
+PLUGIN.author = "Taylor"
 PLUGIN.desc = "UI Upgrade System"
 
 ix.util.Include("cl_plugin.lua")
