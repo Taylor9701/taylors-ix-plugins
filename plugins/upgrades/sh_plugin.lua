@@ -91,9 +91,19 @@ ITEM.upgs = {
 local PANEL = {}
 
 if (CLIENT) then
+
+	function Scale1080(x,y)
+		if x > 0 and y > 0 then
+			return (x/1920 * ScrW()), (y/1080 * ScrH())
+		elseif x > 0 then
+			return (x/1920 * ScrW())
+		elseif y > 0 then
+			return (y/1080 * ScrH())
+		end
+	end
 	
 	function PANEL:Init()
-		self:SetSize(((1920*971)/ScrW()), ((1080*668)/ScrH()))
+		self:SetSize(Scale1080(971,668)) 
 		self:SetDrawBackground(false)
 		self:SetPaintBackground(false)
 		self:Center()
@@ -114,8 +124,8 @@ if (CLIENT) then
 		local closebutton = upgpanel:Add("DImageButton")
 		closebutton:SetMouseInputEnabled(true)
 		closebutton:SetImage("stalker/ui/upgrade/x.png")
-		closebutton:SetSize(18,15)
-		closebutton:SetPos(906,25)
+		closebutton:SetSize(Scale1080(18,15))
+		closebutton:SetPos(Scale1080(906,25))
 		
 		closebutton.DoClick = function()
 			self:Remove()
@@ -126,7 +136,7 @@ if (CLIENT) then
 		
 		local pricebox = upgpanel:Add("DPanel")
 		pricebox:SetSize(120,38)
-		pricebox:SetPos(((1920*280)/ScrW()), ((1080*596)/ScrH()))
+		pricebox:SetPos(Scale1080(280,596))
 		pricebox:SetDrawBackground(false)
 		pricebox:SetPaintBackground(false)
 		
@@ -148,7 +158,7 @@ if (CLIENT) then
 		
 		
 		local instbutton = upgpanel:Add("DImageButton")
-		instbutton:SetPos(((1920*406)/ScrW()), ((1080*596)/ScrH()))
+		instbutton:SetPos(Scale1080(406,596)) 
 		instbutton:SetSize(141,38)
 		instbutton:SetImage("stalker/ui/upgrade/button.png")
 		instbutton:SetMouseInputEnabled(true)
@@ -205,7 +215,7 @@ if (CLIENT) then
 		
 		
 		local uninstbutton = upgpanel:Add("DImageButton")
-		uninstbutton:SetPos(((1920*580)/ScrW()), ((1080*596)/ScrH()))
+		uninstbutton:SetPos(Scale1080(580,596))
 		uninstbutton:SetImage("stalker/ui/upgrade/button.png")
 		uninstbutton:SetSize(141,38)
 		uninstbutton:SetMouseInputEnabled(true)
@@ -254,20 +264,20 @@ if (CLIENT) then
 		
 		
 		local vscroller = upgpanel:Add("DScrollPanel")
-		vscroller:SetSize(440,476)
-		vscroller:SetPos(10,56)
+		vscroller:SetSize(Scale1080(440,476))
+		vscroller:SetPos(Scale1080(10,56))
 		vscroller:SetMouseInputEnabled(true)
 		vscroller:SetVerticalScrollbarEnabled(true)
 		
 		local hscroller = vscroller:Add("DHorizontalScroller")
-		hscroller:SetSize(440,476)
+		hscroller:SetSize(Scale1080(440,476))
 		hscroller.AdjSize = 0
 		hscroller:SetMouseInputEnabled(true)
 		
 		local iteminfo = upgpanel:Add("DImage")
-		iteminfo:SetWidth(505)
+		iteminfo:SetWidth(Scale1080(0,505))
 		iteminfo:Dock(RIGHT)
-		iteminfo:DockMargin(0,96,10,170)
+		iteminfo:DockMargin(0, Scale1080(0,96), Scale1080(10,0), Scale1080(0,170))
 		iteminfo:SetDrawBackground(false)
 		iteminfo:SetPaintBackground(false)
 		iteminfo:SetImage("stalker/ui/upgrade/info_display.png")
@@ -285,10 +295,10 @@ if (CLIENT) then
 						local mat = Material(image)
 						local w = mat:Width()
 						local h = mat:Height()
-						local wmargin = 160
-						local hmargin = 8
-						local diffw = (187 - w)
-						local diffh = (155 - h)
+						local wmargin = Scale1080(160,0)
+						local hmargin = Scale1080(0,8)
+						local diffw = (Scale1080(187,0) - w)
+						local diffh = (Scale1080(155,0) - h)
 						
 						if diffw > 0 then
 							wmargin = math.Truncate(wmargin + (diffw/2))
@@ -305,28 +315,28 @@ if (CLIENT) then
 						itemdisp:DockMargin(wmargin,hmargin,wmargin,0)
 					else
 						itemdisp = iteminfo:Add("ModelImage")
-						itemdisp:SetSize(187,155)
+						itemdisp:SetSize(Scale1080(187,155))
 						itemdisp:SetModel(model)
 						itemdisp:Dock(TOP)
-						itemdisp:DockMargin(160,8,160,0)
+						itemdisp:DockMargin(Scale1080(160,0),Scale1080(8,0),Scale1080(160,0),0)
 					end
 					
 					-- left side of stats box
 					local itemleftsbox = iteminfo:Add("DScrollPanel")
 					itemleftsbox:Dock(LEFT)
-					itemleftsbox:DockMargin(28,48,0,14)
-					itemleftsbox:SetSize(225,180)
+					itemleftsbox:DockMargin(Scale1080(28,0), Scale1080(0,48),0,Scale1080(0,14))
+					itemleftsbox:SetSize(Scale1080(225,180))
 					itemleftsbox:SetDrawBackground(false)
 					itemleftsbox:SetPaintBackground(false)
 					
 					local itemleftboxtitles = itemleftsbox:Add("DPanel")
-					itemleftboxtitles:SetSize(125,0)
+					itemleftboxtitles:SetSize(Scale1080(125,0))
 					itemleftboxtitles:Dock(LEFT)
 					itemleftboxtitles:SetDrawBackground(false)
 					itemleftboxtitles:SetPaintBackground(false)
 					
 					local itemleftboxstats = itemleftsbox:Add("DPanel")
-					itemleftboxstats:SetSize(85,0)
+					itemleftboxstats:SetSize(Scale1080(85,0),0)
 					itemleftboxstats:Dock(LEFT)
 					itemleftboxstats:SetDrawBackground(false)
 					itemleftboxstats:SetPaintBackground(false)
@@ -334,19 +344,19 @@ if (CLIENT) then
 					-- right side of stats box
 					local itemrightsbox = iteminfo:Add("DScrollPanel")
 					itemrightsbox:Dock(LEFT)
-					itemrightsbox:DockMargin(4,48,0,14)
-					itemrightsbox:SetSize(225,180)
+					itemrightsbox:DockMargin(Scale1080(4,0), Scale1080(0,48), 0, Scale1080(0,14))
+					itemrightsbox:SetSize(Scale1080(225,180))
 					itemrightsbox:SetDrawBackground(false)
 					itemrightsbox:SetPaintBackground(false)
 					
 					local itemrightboxtitles = itemrightsbox:Add("DPanel")
-					itemrightboxtitles:SetSize(125,0)
+					itemrightboxtitles:SetSize(Scale1080(125,0),0)
 					itemrightboxtitles:Dock(LEFT)
 					itemrightboxtitles:SetDrawBackground(false)
 					itemrightboxtitles:SetPaintBackground(false)
 					
 					local itemrightboxstats = itemrightsbox:Add("DPanel")
-					itemrightboxstats:SetSize(85,0)
+					itemrightboxstats:SetSize(Scale1080(85,0),0)
 					itemrightboxstats:Dock(LEFT)
 					itemrightboxstats:SetDrawBackground(false)
 					itemrightboxstats:SetPaintBackground(false)
@@ -987,7 +997,7 @@ if (CLIENT) then
 						
 						local upgradeouterbox = hscroller:Add("DPanel")
 						upgradeouterbox:Dock(LEFT)
-						upgradeouterbox:SetWidth(100)
+						upgradeouterbox:SetWidth(Scale1080(100,0))
 						upgradeouterbox:SetDrawBackground(false)
 						upgradeouterbox:SetPaintBackground(false)
 						upgradeouterbox:SetMouseInputEnabled(true)
@@ -995,7 +1005,7 @@ if (CLIENT) then
 						for _,upgs in ipairs(data) do
 							if upgs.pos == i and not upgs.done then
 								if i == 1 then
-									hscroller.AdjSize = (hscroller.AdjSize + 150)
+									hscroller.AdjSize = (hscroller.AdjSize + Scale1080(0,150))
 									if hscroller:GetTall() < hscroller.AdjSize then
 										hscroller:SetTall(hscroller.AdjSize)
 									end
@@ -1022,14 +1032,14 @@ if (CLIENT) then
 								local upgradebox = upgradeouterbox:Add("DPanel")
 								upgradebox:Dock(TOP)
 								upgradebox:DockMargin(0,topmargin,0,0)
-								upgradebox:SetSize(100,100)
+								upgradebox:SetSize(Scale1080(100,100))
 								upgradebox:SetDrawBackground(false)
 								upgradebox:SetPaintBackground(false)
 								upgradebox.Row = upgs.row
 								
 								local upgrade = upgradebox:Add("DImageButton")
 								upgrade:SetImage(BasicUpgTable[upgs.name].img)
-								upgrade:SetSize(90,44)
+								upgrade:SetSize(Scale1080(90,44))
 								upgrade:SetName(upgs.name)
 								upgrade.Selected = false
 								upgrade.Installed = false
@@ -1185,7 +1195,7 @@ if (CLIENT) then
 								timer.Simple(0.5, function()
 									if upgrade.Installed and not upgrade.Blocked then
 										local hoverinst = upgrade:Add("DImage")
-										hoverinst:SetSize(6,38)
+										hoverinst:SetSize(Scale1080(6,38))
 										hoverinst:Dock(LEFT)
 										hoverinst:DockMargin(2,1,0,2)
 										hoverinst:SetImage("stalker/ui/upgrade/install.png")
@@ -1194,7 +1204,7 @@ if (CLIENT) then
 												
 									if upgrade.Blocked and not upgrade.Installed then
 										local hoverblock = upgrade:Add("DImage")
-										hoverblock:SetSize(6,38)
+										hoverblock:SetSize(Scale1080(6,38))
 										hoverblock:Dock(LEFT)
 										hoverblock:DockMargin(2,1,0,2)
 										hoverblock:SetImage("stalker/ui/upgrade/denied.png")
@@ -1235,7 +1245,7 @@ if (CLIENT) then
 										end
 										
 										local hover = upgrade:Add("DImage")
-										hover:SetSize(6,38)
+										hover:SetSize(Scale1080(6,38))
 										hover:Dock(LEFT)
 										hover:DockMargin(2,1,0,2)
 										hover:SetImage("stalker/ui/upgrade/select.png")
@@ -1290,7 +1300,7 @@ if (CLIENT) then
 										
 										if installed then
 											local hoverinst = upgrade:Add("DImage")
-											hoverinst:SetSize(6,38)
+											hoverinst:SetSize(Scale1080(6,38))
 											hoverinst:Dock(LEFT)
 											hoverinst:DockMargin(2,1,0,2)
 											hoverinst:SetImage("stalker/ui/upgrade/install.png")
@@ -1572,7 +1582,7 @@ if (CLIENT) then
 												if name == upgs2.name then
 													local upgrade2 = upgradebox:Add("DImageButton")
 													upgrade2:SetImage(BasicUpgTable[upgs2.name].img)
-													upgrade2:SetSize(90,44)
+													upgrade2:SetSize(Scale1080(90,44))
 													upgrade2:Dock(TOP)
 													upgrade2:DockMargin(5,3,5,3)
 													upgrade2:SetName(upgs2.name)
@@ -1674,7 +1684,7 @@ if (CLIENT) then
 													timer.Simple(0.5, function()
 														if upgrade2.Installed and not upgrade2.Blocked then
 															local hoverinst2 = upgrade2:Add("DImage")
-															hoverinst2:SetSize(6,38)
+															hoverinst2:SetSize(Scale1080(6,38))
 															hoverinst2:Dock(LEFT)
 															hoverinst2:DockMargin(2,1,0,2)
 															hoverinst2:SetImage("stalker/ui/upgrade/install.png")
@@ -1683,7 +1693,7 @@ if (CLIENT) then
 																	
 														if upgrade2.Blocked and not upgrade2.Installed then
 															local hoverblock2 = upgrade2:Add("DImage")
-															hoverblock2:SetSize(6,38)
+															hoverblock2:SetSize(Scale1080(6,38))
 															hoverblock2:Dock(LEFT)
 															hoverblock2:DockMargin(2,1,0,2)
 															hoverblock2:SetImage("stalker/ui/upgrade/denied.png")
@@ -1724,7 +1734,7 @@ if (CLIENT) then
 															end
 															
 															local hover = upgrade2:Add("DImage")
-															hover:SetSize(6,38)
+															hover:SetSize(Scale1080(6,38))
 															hover:Dock(LEFT)
 															hover:DockMargin(2,1,0,2)
 															hover:SetImage("stalker/ui/upgrade/select.png")
@@ -1779,7 +1789,7 @@ if (CLIENT) then
 															
 															if installed then
 																local hoverinst = upgrade2:Add("DImage")
-																hoverinst:SetSize(6,38)
+																hoverinst:SetSize(Scale1080(6,38))
 																hoverinst:Dock(LEFT)
 																hoverinst:DockMargin(2,1,0,2)
 																hoverinst:SetImage("stalker/ui/upgrade/install.png")
@@ -2174,13 +2184,15 @@ else
 		if item then
 			local curdata = item:GetData(ename)
 			
-			for key,tab in pairs(curdata) do
-				local pass
-				pass = table.RemoveByValue(curdata[key].name, name)
-				
-				if pass then
-					curdata[key].amount = tab.amount - value
-					newval = true
+			if curdata then
+				for key,tab in pairs(curdata) do
+					local pass
+					pass = table.RemoveByValue(curdata[key].name, name)
+					
+					if pass then
+						curdata[key].amount = tab.amount - value
+						newval = true
+					end
 				end
 			end
 			

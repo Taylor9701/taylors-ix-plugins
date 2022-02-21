@@ -13,6 +13,16 @@ local stndcolor = Color(255,255,255)
 
 if CLIENT then
 	
+	function Scale1080(x,y)
+		if x > 0 and y > 0 then
+			return (x/1920 * ScrW()), (y/1080 * ScrH())
+		elseif x > 0 then
+			return (x/1920 * ScrW())
+		elseif y > 0 then
+			return (y/1080 * ScrH())
+		end
+	end
+	
 	local thinktime = 1
 	local marg5v = (.0046296296296296*ScrH())
 	local marg5h = (.0026041666666667*ScrW())
@@ -50,9 +60,9 @@ if CLIENT then
 		local listimage = Material(image)
 		local w = listimage:Width()
 		local h = listimage:Height()
-		local scale = w/((.09375)*ScrW())
+		local scale = w/Scale1080(180,0)
 		local newheight = h/scale
-		local difference = ((.13240740740741)*ScrH()) - newheight
+		local difference = Scale1080(0,143) - newheight
 		
 		if difference < 10 then
 			difference = 10
@@ -68,7 +78,7 @@ if CLIENT then
 			[5] = {"PDA Handle: ", character:GetData("pdanickname","No PDA Name")},
 		}
 		
-		self:SetSize(((2/3)*ScrW()), ((.66759259259259)*ScrH()))
+		self:SetSize(Scale1080(1280,720))
 		self:Center()
 		self:SetDrawBackground(false)
 		self:SetPaintBackground(false)
@@ -82,9 +92,10 @@ if CLIENT then
 		
 		-- PLAYER PROFILE PANEL
 		local profbox = pdabg:Add("DImage")
-		profbox:SetSize(((0.625)*ScrW()),((.14166666666667)*ScrH()))
+		profbox:SetSize(Scale1080(1200,153)) 
 		profbox:Dock(TOP)
-		profbox:DockMargin((.018229166666667*ScrW()),(.032407407407407*ScrH()),(.018229166666667*ScrW()),0)
+		local profboxX, profboxY = Scale1080(35,35)
+		profbox:DockMargin(profboxX,profboxY,profboxX,0)
 		profbox:SetImage("stalker/ui/rankings/profile.png")
 		profbox:SetMouseInputEnabled(true)
 		
@@ -93,19 +104,21 @@ if CLIENT then
 		plyimg:CenterVertical()
 		plyimg:Dock(LEFT)
 		
-		if w < ((.09375)*ScrW()) and h < ((.12314814814815)*ScrH()) then
-			local marg = ((.13240740740741*ScrH())-h)/2
+		local plyimgX, plyimgY = Scale1080(180,133)
+		if w < plyimgX and h < plyimgY then 
+			local marg = (plyimgY-h)/2
 			
 			plyimg:SetSize(w,h)
 			plyimg:DockMargin(marg5h,marg,0,marg)
 		else
-			plyimg:SetSize(((.09375)*ScrW()), newheight)
+			plyimg:SetSize(plyimgX, newheight)
 			plyimg:DockMargin(marg5h,margin,0,margin)
 		end
 		
 		local plyinfo = profbox:Add("DScrollPanel")
 		plyinfo:SetPos((plyimg:GetWide() + 20),20)
-		plyinfo:SetSize(((0.135416666667)*ScrW()),profbox:GetTall())
+		local plyinfoX = 
+		plyinfo:SetSize(Scale1080(260,0),profbox:GetTall())
 		plyinfo:CenterVertical()
 		plyinfo:Dock(LEFT)
 		plyinfo:DockMargin(marg5h,0,0,0)
@@ -116,7 +129,7 @@ if CLIENT then
 		plyinfoleft:SetDrawBackground(false)
 		
 		local plyinforight = plyinfo:Add("DPanel")
-		plyinforight:SetSize(((.09375)*ScrW()),plyinfo:GetTall())
+		plyinforight:SetSize(Scale1080(180,0),plyinfo:GetTall())
 		plyinforight:Dock(RIGHT)
 		plyinforight:SetDrawBackground(false)
 		
@@ -130,7 +143,7 @@ if CLIENT then
 			infolabelleft:DockMargin(0,marg5v,0,marg5v)
 			
 			local infolabelright = plyinforight:Add("DLabel")
-			infolabelright:SetSize(((.09375)*ScrW()),20)
+			infolabelright:SetSize(Scale1080(180,0),20)
 			infolabelright:SetTextColor(stndcolor)
 			infolabelright:SetText(data[2])
 			infolabelright:SetFont("stalkerregularfont")
@@ -139,7 +152,7 @@ if CLIENT then
 		end
 		
 		local descbox = profbox:Add("DScrollPanel")
-		descbox:SetSize(((.23958333333333)*ScrW()),((.092592592592593)*ScrH()))
+		descbox:SetSize(Scale1080(460,100))
 		descbox:SetDrawBackground(false)
 		descbox:SetMouseInputEnabled(true)
 		descbox:Dock(LEFT)
@@ -151,10 +164,10 @@ if CLIENT then
 		desclabel:SetText("Description:")
 		desclabel:SetAutoStretchVertical(true)
 		desclabel:Dock(TOP)
-		desclabel:SetWidth(((.23958333333333)*ScrW()))
+		desclabel:SetWidth(Scale1080(460,0))
 		
 		local plydesc = descbox:Add("DTextEntry_Edit")
-		plydesc:SetWidth(((.23958333333333)*ScrW()))
+		plydesc:SetWidth(Scale1080(460,0))
 		plydesc:SetValue(description)
 		plydesc:SetFont("stalkerregularfont")
 		plydesc:SetDrawBackground(false)
@@ -166,12 +179,12 @@ if CLIENT then
 		
 		local rankbox = profbox:Add("DPanel")
 		rankbox:SetDrawBackground(false)
-		rankbox:SetSize(((.052083333333333)*ScrW()),20)
+		rankbox:SetSize(Scale1080(100,0),20)
 		rankbox:Dock(LEFT)
 		
 		local ranklabel = rankbox:Add("DLabel")
 		ranklabel:SetAutoStretchVertical(true)
-		ranklabel:SetSize(((.052083333333333)*ScrW()),20)
+		ranklabel:SetSize(Scale1080(100,0),20)
 		ranklabel:Dock(TOP)
 		ranklabel:DockMargin(marg5h,marg5v,marg5h,0)
 		ranklabel:SetTextColor(headcolor)
@@ -180,7 +193,7 @@ if CLIENT then
 		
 		local rankname = rankbox:Add("DLabel")
 		rankname:SetAutoStretchVertical(true)
-		rankname:SetSize(((.052083333333333)*ScrW()),20)
+		rankname:SetSize(Scale1080(100,0),20)
 		rankname:Dock(TOP)
 		rankname:DockMargin(marg5h,marg5v,marg5h,marg5v)
 		rankname:SetText(rank)
@@ -188,7 +201,7 @@ if CLIENT then
 		
 		local replabel = rankbox:Add("DLabel")
 		replabel:SetAutoStretchVertical(true)
-		replabel:SetSize(((.052083333333333)*ScrW()),20)
+		replabel:SetSize(Scale1080(100,0),20)
 		replabel:Dock(TOP)
 		replabel:DockMargin(marg5h,marg5v,marg5h,0)
 		replabel:SetTextColor(headcolor)
@@ -197,7 +210,7 @@ if CLIENT then
 		
 		local repvalue = rankbox:Add("DLabel")
 		repvalue:SetAutoStretchVertical(true)
-		repvalue:SetSize(((.052083333333333)*ScrW()),20)
+		repvalue:SetSize(Scale1080(100,0),20)
 		repvalue:Dock(TOP)
 		repvalue:DockMargin(marg5h,marg5v,marg5h,marg5v)
 		repvalue:SetText(reputation)
@@ -206,7 +219,7 @@ if CLIENT then
 		
 		local buttontitle1 = profbox:Add("DLabel")
 		buttontitle1:Dock(TOP)
-		buttontitle1:DockMargin((.020833333333333*ScrW()),marg5v,0,0)
+		buttontitle1:DockMargin(Scale1080(40,0),marg5v,0,0)
 		buttontitle1:SetText("Profile Publicity")
 		buttontitle1:SetFont("stalkerregularfont")
 		
@@ -218,7 +231,7 @@ if CLIENT then
 		end
 		buttonadvanced:Dock(TOP)
 		buttonadvanced:DockMargin(marg5h,(.013888888888889*ScrH()),0,0)
-		buttonadvanced:SetSize(((.090104166666667)*ScrW()),20)
+		buttonadvanced:SetSize(Scale1080(173,0),20)
 		buttonadvanced:SetText("Advanced")
 		buttonadvanced:SetFont("stalkerregularfont")
 		buttonadvanced:SetMouseInputEnabled(true)
@@ -238,7 +251,7 @@ if CLIENT then
 			buttonbasic:SetImage("stalker/ui/pda/pda_button.png")
 		end
 		buttonbasic:Dock(TOP)
-		buttonbasic:DockMargin(marg5h,(.013888888888889*ScrH()),0,0)
+		buttonbasic:DockMargin(marg5h,Scale1080(0,15),0,0)
 		buttonbasic:SetText("Basic")
 		buttonbasic:SetFont("stalkerregularfont")
 		buttonbasic:SetMouseInputEnabled(true)
@@ -254,9 +267,10 @@ if CLIENT then
 		-- PLAYERS LIST PANEL
 		
 		local ranklistbox = pdabg:Add("DImage")
-		ranklistbox:SetSize(((.29739583333333)*ScrW()),((.45185185185185)*ScrH()))
+		ranklistbox:SetSize(Scale1080(571,488)) 
 		ranklistbox:Dock(RIGHT)
-		ranklistbox:DockMargin((.018229166666667*ScrW()),marg5v,(.018229166666667*ScrW()),(.037037037037037*ScrH()))
+		local ranklistboxX, ranklistboxY = Scale1080(35,40)
+		ranklistbox:DockMargin(ranklistboxX, marg5v, ranklistboxX, ranklistboxY)
 		ranklistbox:SetImage("stalker/ui/rankings/rank_list.png")
 		ranklistbox:SetName("RankListBox")
 		ranklistbox:SetMouseInputEnabled(true)
@@ -264,9 +278,11 @@ if CLIENT then
 		-- PLAYER INFO PANEL
 		local rankinfo = pdabg:Add("DImage")
 		rankinfo:Center()
-		rankinfo:SetSize(((.33177083333333)*ScrW()),((.45185185185185)*ScrH()))
+		rankinfo:SetSize(Scale1080(637,488)) 
 		rankinfo:Dock(LEFT)
-		rankinfo:DockMargin((.018229166666667*ScrW()),marg5v,marg5h,(.020833333333333*ScrW()))
+		local rankinfoX1 = Scale1080(35,0)
+		local rankinfoX2 = Scale1080(40,0)
+		rankinfo:DockMargin(rankinfoX1, marg5v, marg5h, rankinfoX2)
 		rankinfo:SetImage("stalker/ui/rankings/rank_display.png")
 		rankinfo:SetMouseInputEnabled(true)
 		
@@ -324,9 +340,9 @@ if CLIENT then
 			local listimage = Material(image)
 			local w = listimage:Width()
 			local h = listimage:Height()
-			local scale = w/((.09375)*ScrW())
+			local scale = w/Scale1080(180,0) 
 			local newheight = h/scale
-			local difference = (.13240740740741*ScrH()) - newheight
+			local difference = Scale1080(0,143) - newheight
 			
 			if difference < 10 then
 				difference = 10
@@ -339,23 +355,25 @@ if CLIENT then
 			infoimage:SetName("InfoImage")
 			infoimage:SetPos(5,5)
 			
-			if w < ((.09375)*ScrW()) and h < ((.12314814814815)*ScrH()) then
+			local infoimageX, infoimageY = Scale1080(180,133)
+			
+			if w < infoimageX and h < infoimageY then
 				infoimage:SetSize(w,h)
 			else
-				infoimage:SetSize(((.09375)*ScrW()),newheight)
+				infoimage:SetSize(infoimageX,newheight)
 			end
 			
 			local x,y = infoimage:GetPos()
-			local infow = ((.11458333333333)*ScrW())
+			local infow = Scale1080(220,0)
 			local toprow = y
 			
 			local leftbox = rankinfo:Add("DPanel")
 			leftbox:SetDrawBackground(false)
-			leftbox:SetSize(infow,(.13240740740741*ScrH()))
-			leftbox:SetPos(x + (.096354166666667*ScrW()), y) 
+			leftbox:SetSize(Scale1080(220, 143))
+			leftbox:SetPos(x + Scale1080(185, 0), y)
 			
 			local leftlabelbox = leftbox:Add("DPanel")
-			leftlabelbox:SetSize(77,(.13240740740741*ScrH()))
+			leftlabelbox:SetSize(77,Scale1080(0, 143))
 			leftlabelbox:Dock(LEFT)
 			leftlabelbox:SetDrawBackground(false)
 			
@@ -388,12 +406,14 @@ if CLIENT then
 			
 			local leftinfobox = leftbox:Add("DPanel")
 			leftinfobox:SetDrawBackground(false)
-			leftinfobox:SetSize(((.071875)*ScrW()),(.13240740740741*ScrH()))
+			leftinfobox:SetSize(Scale1080(138,143)) 
 			leftinfobox:Dock(RIGHT)
+			
+			local infoW = Scale1080(138,0)
 			
 			local leftinfo1 = leftinfobox:Add("DLabel")
 			leftinfo1:SetAutoStretchVertical(true)
-			leftinfo1:SetSize(((.071875)*ScrW()),10)
+			leftinfo1:SetSize(infoW,10) 
 			leftinfo1:SetFont("stalkerregularfont")
 			leftinfo1:Dock(TOP)
 			leftinfo1:SetText(pdaname)
@@ -401,14 +421,14 @@ if CLIENT then
 			
 			local leftinfo2 = leftinfobox:Add("DLabel")
 			leftinfo2:SetAutoStretchVertical(true)
-			leftinfo2:SetSize(((.071875)*ScrW()),10)
+			leftinfo2:SetSize(infoW,10)
 			leftinfo2:SetFont("stalkerregularfont")
 			leftinfo2:Dock(TOP)
 			leftinfo2:SetText(rank)
 			leftinfo2:DockMargin(0,marg5v,0,marg5v)
 			
 			local leftinfo3 = leftinfobox:Add("DLabel")
-			leftinfo3:SetSize(((.071875)*ScrW()),10)
+			leftinfo3:SetSize(infoW,10)
 			leftinfo3:SetAutoStretchVertical(true)
 			leftinfo3:SetFont("stalkerregularfont")
 			leftinfo3:Dock(TOP)
@@ -419,18 +439,20 @@ if CLIENT then
 			x,y = leftbox:GetPos()
 			
 			local rightbox = rankinfo:Add("DPanel")
-			rightbox:SetPos(x +((.11458333333333)*ScrW()), toprow)
-			rightbox:SetSize(infow,(.13240740740741*ScrH()))
+			rightbox:SetPos(x + Scale1080(220,0), toprow)
+			rightbox:SetSize(infow, Scale1080(0,143))
 			rightbox:SetDrawBackground(false)
 			
 			local rightlabelbox = rightbox:Add("DPanel")
-			rightlabelbox:SetSize(((.039583333333333)*ScrW()),(.13240740740741*ScrH()))
+			rightlabelbox:SetSize(Scale1080(76,143))
 			rightlabelbox:SetDrawBackground(false)
 			rightlabelbox:Dock(LEFT)
 			
+			local rightlabelX = Scale1080(73,0)
+			
 			local rightlabelname = rightlabelbox:Add("DLabel")
 			rightlabelname:Dock(TOP)
-			rightlabelname:SetSize(((.038020833333333)*ScrW()),10)
+			rightlabelname:SetSize(rightlabelX,10)
 			rightlabelname:SetAutoStretchVertical(true)
 			rightlabelname:SetTextColor(headcolor)
 			rightlabelname:SetFont("stalkerregularfont")
@@ -439,7 +461,7 @@ if CLIENT then
 			
 			local rightlabelage = rightlabelbox:Add("DLabel")
 			rightlabelage:Dock(TOP)
-			rightlabelage:SetSize(((.038020833333333)*ScrW()),10)
+			rightlabelage:SetSize(rightlabelX,10)
 			rightlabelage:SetAutoStretchVertical(true)
 			rightlabelage:SetTextColor(headcolor)
 			rightlabelage:SetFont("stalkerregularfont")
@@ -448,7 +470,7 @@ if CLIENT then
 			
 			local rightlabelnat = rightlabelbox:Add("DLabel")
 			rightlabelnat:Dock(TOP)
-			rightlabelnat:SetSize(((.038020833333333)*ScrW()),10)
+			rightlabelnat:SetSize(rightlabelX,10)
 			rightlabelnat:SetAutoStretchVertical(true)
 			rightlabelnat:SetTextColor(headcolor)
 			rightlabelnat:SetFont("stalkerregularfont")
@@ -457,7 +479,7 @@ if CLIENT then
 			
 			local rightlabelrace = rightlabelbox:Add("DLabel")
 			rightlabelrace:Dock(TOP)
-			rightlabelrace:SetSize(((.038020833333333)*ScrW()),10)
+			rightlabelrace:SetSize(rightlabelX,10)
 			rightlabelrace:SetAutoStretchVertical(true)
 			rightlabelrace:SetTextColor(headcolor)
 			rightlabelrace:SetFont("stalkerregularfont")
@@ -466,12 +488,15 @@ if CLIENT then
 			
 			local rightinfobox = rightbox:Add("DPanel")
 			rightinfobox:SetDrawBackground(false)
-			rightinfobox:SetSize(((.075)*ScrW()),(.13240740740741*ScrH()))
+			rightinfobox:SetSize(Scale1080(144,143))
 			rightinfobox:Dock(RIGHT)
+			
+			
+			local rightinfoX = Scale1080(144,0)
 			
 			local rightinfoname = rightinfobox:Add("DLabel")
 			rightinfoname:Dock(TOP)
-			rightinfoname:SetSize(((.075)*ScrW()),20)
+			rightinfoname:SetSize(rightinfoX,20)
 			rightinfoname:SetAutoStretchVertical(true)
 			rightinfoname:SetFont("stalkerregularfont")
 			rightinfoname:DockMargin(0,marg5v,0,marg5v)
@@ -484,7 +509,7 @@ if CLIENT then
 			
 			local rightinfoage = rightinfobox:Add("DLabel")
 			rightinfoage:Dock(TOP)
-			rightinfoage:SetSize(((.075)*ScrW()),20)
+			rightinfoage:SetSize(rightinfoX,20)
 			rightinfoage:SetAutoStretchVertical(true)
 			rightinfoage:SetFont("stalkerregularfont")
 			rightinfoage:DockMargin(0,marg5v,0,marg5v)
@@ -497,7 +522,7 @@ if CLIENT then
 			
 			local rightinfonat = rightinfobox:Add("DLabel")
 			rightinfonat:Dock(TOP)
-			rightinfonat:SetSize(((.075)*ScrW()),20)
+			rightinfonat:SetSize(rightinfoX,20)
 			rightinfonat:SetAutoStretchVertical(true)
 			rightinfonat:SetFont("stalkerregularfont")
 			rightinfonat:DockMargin(0,marg5v,0,marg5v)
@@ -510,7 +535,7 @@ if CLIENT then
 			
 			local rightinforace = rightinfobox:Add("DLabel")
 			rightinforace:Dock(TOP)
-			rightinforace:SetSize(((.075)*ScrW()),20)
+			rightinforace:SetSize(rightinfoX,20)
 			rightinforace:SetAutoStretchVertical(true)
 			rightinforace:SetFont("stalkerregularfont")
 			rightinforace:DockMargin(0,marg5v,0,marg5v)
@@ -524,13 +549,15 @@ if CLIENT then
 			x,y = infoimage:GetPos()
 			
 			local descbackbox = rankinfo:Add("DScrollPanel")
-			descbackbox:SetSize(((.328125)*ScrW()),((.30648148148148)*ScrH()))
-			descbackbox:SetPos(x, y + (.13240740740741*ScrH()))
+			descbackbox:SetSize(Scale1080(630,331))
+			descbackbox:SetPos(x, y + Scale1080(0,143))
 			descbackbox:SetMouseInputEnabled(true)
+			
+			local infodesclabelX = Scale1080(630,0)
 			
 			local infodesclabel = descbackbox:Add("DLabel")
 			infodesclabel:Dock(TOP)
-			infodesclabel:SetWidth(((.328125)*ScrW()))
+			infodesclabel:SetWidth(infodesclabelX)
 			infodesclabel:SetAutoStretchVertical(true)
 			infodesclabel:SetTextColor(headcolor)
 			infodesclabel:SetFont("stalkerregularfont")
@@ -542,7 +569,7 @@ if CLIENT then
 			infodesc:SetTextColor(Color(255,255,255))
 			infodesc:SetFont("stalkerregularfont")
 			infodesc:SetEditable(false)
-			infodesc:SetWidth(((.328125)*ScrW()))
+			infodesc:SetWidth(infodesclabelX)
 			infodesc:Dock(TOP)
 			if desc then
 				infodesc:SetValue(desc)
@@ -553,7 +580,7 @@ if CLIENT then
 			
 			local infobacklabel = descbackbox:Add("DLabel")
 			infobacklabel:Dock(TOP)
-			infobacklabel:SetWidth(((.328125)*ScrW()))
+			infobacklabel:SetWidth(infodesclabelX)
 			infobacklabel:SetAutoStretchVertical(true)
 			infobacklabel:SetTextColor(headcolor)
 			infobacklabel:SetFont("stalkerregularfont")
@@ -565,9 +592,9 @@ if CLIENT then
 			infoback:SetTextColor(Color(255,255,255))
 			infoback:SetFont("stalkerregularfont")
 			infoback:SetEditable(false)
-			infoback:SetWidth(((.328125)*ScrW()))
+			infoback:SetWidth(infodesclabelX)
 			infoback:Dock(TOP)
-			infoback:DockMargin(0,(.0092592592592593*ScrH()),0,0)
+			infoback:DockMargin(0,Scale1080(0,10),0,0)
 			if desc and backstory then
 				infoback:SetValue(backstory)
 			else
@@ -594,8 +621,7 @@ if CLIENT then
 				end
 			end
 			
-			local marg4h = (.0020833333333333*ScrW())
-			local marg4v = (.0037037037037037*ScrH())
+			local marg4h, marg4v = Scale1080(4,4)
 			local ranklist = ranklistbox:Add("DScrollPanel")
 			ranklist:Dock(FILL)
 			ranklist:DockMargin(marg4h,marg4v,marg4h,marg4v)
@@ -624,7 +650,7 @@ if CLIENT then
 				end
 				
 				local plyrankbox = ranklist:Add("DImageButton")
-				plyrankbox:SetSize(((.284375)*ScrW()),121)
+				plyrankbox:SetSize(Scale1080(546,0),121)
 				plyrankbox:Dock(TOP)
 				plyrankbox:DockMargin(marg5h,marg5v,marg5h,marg5v)
 				plyrankbox:SetImage("stalker/ui/rankings/rank_list_box.png")
@@ -635,10 +661,10 @@ if CLIENT then
 					local listimage = Material(img)
 					local w = listimage:Width() 
 					local h = listimage:Height()
-					local scale = w/((.072916666666667)*ScrW())
+					local scale = w/Scale1080(140,0)
 					local newheight = h/scale
-					local difference = ((.10277777777778)*ScrH()) - newheight
-					local vertmarg = ((.030555555555556)*ScrH())
+					local difference = Scale1080(0,197) - newheight
+					local vertmarg = Scale1080(0,33)
 					
 					if difference < 10 then
 						difference = 10
@@ -648,11 +674,11 @@ if CLIENT then
 					rankings:SetText(count..".")
 					rankings:SetTextColor(Color(255,255,255))
 					rankings:SetFont("stalkerregularfont")
-					rankings:SetPos(((.27239583333333)*ScrW()),3)
+					rankings:SetPos(Scale1080(523,0),3)
 					rankings:SetAutoStretchVertical(true)
 					rankings:SizeToContentsX()
 					rankings:Dock(LEFT)
-					rankings:DockMargin(5,((.046296296296296)*ScrH()),0,0)
+					rankings:DockMargin(5,Scale1080(0,50),0,0)
 					rankings:SetMouseInputEnabled(true)
 					
 					local margin = (difference/2)
@@ -660,44 +686,51 @@ if CLIENT then
 					pdaimage:SetImage(img)
 					pdaimage:Dock(LEFT)
 					
-					if w < ((.072916666666667)*ScrW()) and h < ((.093518518518519)*ScrH()) then
-						local marg = (((.10277777777778)*ScrH())-h)/2
+					local pdaimageX = Scale1080(140,0)
+					local pdaimageY = Scale1080(0,101)
+					
+					if w < pdaimageX and h < pdaimageY then
+						local marg = (Scale1080(0,111) - h) / 2
 						
 						pdaimage:SetSize(w,h)
 						pdaimage:DockMargin(marg5h,marg,0,marg)
 					else
-						pdaimage:SetSize(((.072916666666667)*ScrW()), newheight)
+						pdaimage:SetSize(pdaimageX, newheight)
 						pdaimage:DockMargin(marg5h,margin,0,margin)
 					end
 					
+					local pdanameboxX, pdanameboxY = Scale1080(111,121)
+					local pdanamelabelY = Scale1080(0,40)
+					local pdanamelabelX = Scale1080(25,0)
+					
 					local pdanamebox = plyrankbox:Add("DButton")
-					pdanamebox:SetSize(((.0578125)*ScrW()),((.11203703703704)*ScrH()))
+					pdanamebox:SetSize(pdanameboxX,pdanameboxY) 
 					pdanamebox:SetDrawBackground(false)
 					pdanamebox:Dock(LEFT)
 					pdanamebox:SetMouseInputEnabled(true)
 					pdanamebox:SetText(" ")
 					
 					local pdanamelabel = pdanamebox:Add("DLabel")
-					pdanamelabel:SetSize(((.0578125)*ScrW()),((.037037037037037)*ScrH()))
+					pdanamelabel:SetSize(pdanameboxX,pdanamelabelY)
 					pdanamelabel:SetAutoStretchVertical(true)
 					pdanamelabel:SetTextColor(headcolor)
 					pdanamelabel:SetText("PDA Handle:")
 					pdanamelabel:SetFont("stalkerregularfont")
 					pdanamelabel:Dock(TOP)
-					pdanamelabel:DockMargin((.013020833333333*ScrW()),vertmarg,marg5h,marg5v)
+					pdanamelabel:DockMargin(pdanamelabelX,vertmarg,marg5h,marg5v)
 					pdanamelabel:SetMouseInputEnabled(true)
 					
 					local pdaname = pdanamebox:Add("DLabel")
-					pdaname:SetSize(((.0578125)*ScrW()),((.037037037037037)*ScrH()))
+					pdaname:SetSize(pdanameboxX,pdanamelabelY)
 					pdaname:SetAutoStretchVertical(true)
 					pdaname:SetText(name)
 					pdaname:SetFont("stalkerregularfont")
 					pdaname:Dock(TOP)
-					pdaname:DockMargin((.013020833333333*ScrW()),2,marg5h,0)
+					pdaname:DockMargin(pdanamelabelX,2,marg5h,0)
 					pdaname:SetMouseInputEnabled(true)
 					
 					local rankbox = plyrankbox:Add("DButton")
-					rankbox:SetSize(((.0578125)*ScrW()),((.11203703703704)*ScrH()))
+					rankbox:SetSize(pdanameboxX,pdanameboxY)
 					rankbox:SetDrawBackground(false)
 					rankbox:Dock(LEFT)
 					rankbox:SetMouseInputEnabled(true)
@@ -705,25 +738,25 @@ if CLIENT then
 					
 					local ranklabel = rankbox:Add("DLabel")
 					ranklabel:SetAutoStretchVertical(true)
-					ranklabel:SetSize(((.0578125)*ScrW()),((.037037037037037)*ScrH()))
+					ranklabel:SetSize(pdanameboxX,pdanamelabelY)
 					ranklabel:SetText("Rank:")
 					ranklabel:SetTextColor(headcolor)
 					ranklabel:SetFont("stalkerregularfont")
 					ranklabel:Dock(TOP)
-					ranklabel:DockMargin((.013020833333333*ScrW()),vertmarg,marg5h,marg5v)
+					ranklabel:DockMargin(pdanamelabelX,vertmarg,marg5h,marg5v)
 					ranklabel:SetMouseInputEnabled(true)
 					
 					local rank = rankbox:Add("DLabel")
 					rank:SetAutoStretchVertical(true)
-					rank:SetSize(((.0578125)*ScrW()),((.037037037037037)*ScrH()))
+					rank:SetSize(pdanameboxX,pdanamelabelY)
 					rank:SetText(rnk)
 					rank:SetFont("stalkerregularfont")
 					rank:Dock(TOP)
-					rank:DockMargin((.013020833333333*ScrW()),2,marg5h,0)
+					rank:DockMargin(pdanamelabelX,2,marg5h,0)
 					rank:SetMouseInputEnabled(true)
 					
 					local reputationbox = plyrankbox:Add("DButton")
-					reputationbox:SetSize(((.0578125)*ScrW()),((.11203703703704)*ScrH()))
+					reputationbox:SetSize(pdanameboxX,pdanameboxY)
 					reputationbox:SetDrawBackground(false)
 					reputationbox:Dock(LEFT)
 					reputationbox:SetMouseInputEnabled(true)
@@ -731,22 +764,22 @@ if CLIENT then
 					
 					local reputationlabel = reputationbox:Add("DLabel")
 					reputationlabel:SetAutoStretchVertical(true)
-					reputationlabel:SetSize(((.0578125)*ScrW()),((.037037037037037)*ScrH()))
+					reputationlabel:SetSize(pdanameboxX,pdanamelabelY)
 					reputationlabel:SetTextColor(headcolor)
 					reputationlabel:SetText("Reputation:")
 					reputationlabel:SetFont("stalkerregularfont")
 					reputationlabel:Dock(TOP)
-					reputationlabel:DockMargin((.013020833333333*ScrW()),vertmarg,marg5h,marg5v)
+					reputationlabel:DockMargin(pdanamelabelX,vertmarg,marg5h,marg5v)
 					reputationlabel:SetMouseInputEnabled(true)
 					
 					local reputation = reputationbox:Add("DLabel")
 					reputation:SetAutoStretchVertical(true)
-					reputation:SetSize(((.0578125)*ScrW()),((.037037037037037)*ScrH()))
+					reputation:SetSize(pdanameboxX,pdanamelabelY)
 					reputation:SetTextColor(repcolor)
 					reputation:SetText(repu)
 					reputation:SetFont("stalkerregularfont")
 					reputation:Dock(TOP)
-					reputation:DockMargin((.013020833333333*ScrW()),2,marg5h,0)
+					reputation:DockMargin(pdanamelabelX,2,marg5h,0)
 					reputation:SetMouseInputEnabled(true)
 					
 					count = count + 1
@@ -902,7 +935,7 @@ end
 
 --[[
 The below code was originally written by Verne, known currently for the Call Of The Zone schema.
-I've made some changes to it, and the above code depends on this to function properly.
+I've made some small changes to it, and the above code depends on his to function properly.
 --]]
 
 PLUGIN.repDefs = {
