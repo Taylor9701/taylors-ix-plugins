@@ -1,5 +1,7 @@
 local PLUGIN = PLUGIN
 
+if not CustomizableWeaponry_KK then return end
+
 ITEM.name = "Grenade"
 ITEM.description = "An object you throw at enemies for tactical reasons."
 ITEM.category = "Weapons"

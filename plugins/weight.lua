@@ -15,19 +15,57 @@ local backpacks = {
 	["Large Zone Survival Backpack (Camouflaged)"] = 70,
 }
 
---[[
-For this plugin to work properly, go to: "helix/gamemode/core/derma/cl_inventory.lua"
-Change Line 764 from "panel:SetTitle(nil)" to "panel:SetTitle(" ")"
-This may move around as helix is updated, so full context is:
+hook.Remove("CreateMenuButtons", "ixInventory")
 
-	local panel = canvas:Add("ixInventory")
-	panel:SetPos(0, 0)
-	panel:SetDraggable(false)
-	panel:SetSizable(false)
-	panel:SetTitle(" ") 					-- <====== this one!
-	panel.bNoBackgroundBlur = true
-	panel.childPanels = {}
---]]
+hook.Add("CreateMenuButtons", "ixInventory", function(tabs)
+	if (hook.Run("CanPlayerViewInventory") == false) then
+		return
+	end
+
+	tabs["inv"] = {
+		bDefault = true,
+		Create = function(info, container)
+			local canvas = container:Add("DTileLayout")
+			local canvasLayout = canvas.PerformLayout
+			canvas.PerformLayout = nil -- we'll layout after we add the panels instead of each time one is added
+			canvas:SetBorder(0)
+			canvas:SetSpaceX(2)
+			canvas:SetSpaceY(2)
+			canvas:Dock(FILL)
+
+			ix.gui.menuInventoryContainer = canvas
+
+			local panel = canvas:Add("ixInventory")
+			panel:SetPos(0, 0)
+			panel:SetDraggable(false)
+			panel:SetSizable(false)
+			panel:SetTitle("")
+			panel.bNoBackgroundBlur = true
+			panel.childPanels = {}
+
+			local inventory = LocalPlayer():GetCharacter():GetInventory()
+
+			if (inventory) then
+				panel:SetInventory(inventory)
+			end
+
+			ix.gui.inv1 = panel
+
+			if (ix.option.Get("openBags", true)) then
+				for _, v in pairs(inventory:GetItems()) do
+					if (!v.isBag) then
+						continue
+					end
+
+					v.functions.View.OnClick(v)
+				end
+			end
+
+			canvas.PerformLayout = canvasLayout
+			canvas:Layout()
+		end
+	}
+end)
 
 ix.config.Add("maxWeight", 50, "Determines the default max carry weight.", nil, {
 	data = {min = 1, max = 200},

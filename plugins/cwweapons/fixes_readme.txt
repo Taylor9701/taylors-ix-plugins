@@ -1,6 +1,3 @@
---[[
-
-
 This is a list of bug-fixes for both the CW2.0 KK INS2 and CW2.0 base to resolve various issues 
 with either base that you may come across. If you are even somewhat experienced with looking at code,
 and know how to follow these directions, I encourage you to try these things if you run into the 
@@ -8,8 +5,41 @@ issues I mention. I cannot guarantee they will work and will not cause other iss
 they worked for me on live servers with 20-40 players for several weeks, and lower pop over many months, 
 so I have a reasonable degree of confidence in them.
 
+NOTE: Most of these are already implemented in the sh_kkins2fix.lua file, but if that file causes you problems or 
+something, this list will remain for the purpose of informing what was or should be changed.
 
-CW2.0 KK INS2 FIXES:
+
+FOLLOWING NOT INCLUDED IN FIXES FILE:
+
+===================================================================================================================
+
+I keep getting occasional errors at the lines mentioned below:
+
+sh_nwext.lua - lines 120 & 121 replaced with:
+if istable(wep.ActiveAttachments) then
+    net.WriteTable(wep.ActiveAttachments)
+    net.Send(ply)
+end
+ 
+Simply add a check to ensure ActiveAttachments are in table format and not just nil. 
+Occasionally caused bugs otherwise, attempting to write nil data into a WriteTable 
+command which causes problems. Rare, but does occur. Not sure why, but this removes the error, 
+whatever was causing it never actually resulted in undesired behavior, just console errors.
+
+===================================================================================================================
+
+CW2.0 SOUND FIX:
+
+Sounds for shooting/reloading/etc keep cutting out randomly when doing things such as walking:
+
+line 54:
+change "channel = channel or CHAN_AUTO" to "channel = channel or CHAN_WEAPON"
+
+Part of the sound fix mentioned and explained below.
+
+===================================================================================================================
+
+FOLLOWING INCLUDED IN FIXES FILE:
 
 PAC Models won't render when looking down sights:
 
@@ -21,7 +51,7 @@ end
 If PAC is enabled, using a sight will forcibly render PACs and cause them to no longer disappear when 
 aiming down a sight at a player using one. Only runs if PAC is installed, obviously.
  
-
+===================================================================================================================
 
 I keep getting an error at the line mentioned below when using other weapons base(s):
  
@@ -30,7 +60,7 @@ o_shared.lua - line 160 changed to:
  
 Avoids conflicts with other SWEP bases that may have similarly named calls.
 
-
+===================================================================================================================
 
 I'm getting errors in this file at these lines for whatever reason:
  
@@ -45,7 +75,7 @@ Simply avoids erroring out if holster data is either missing or invalid. Specifi
 useful if no speedmult is desired and is then removed under the assumption it is not a 
 necessary var. Also allows for minimal delay holstering if such behavior is specifically desired.
 
-
+===================================================================================================================
 
 I keep getting errors at/near this set of lines:
 
@@ -76,7 +106,7 @@ end
 
 Simply adds an additional check to ensure that the BoneID is valid.
 
-
+===================================================================================================================
 
 Players leave render distance with a weapon in-hand, but upon re-rendering, the gun is gone:
 
@@ -100,22 +130,7 @@ Ensures that, upon rendering, if the WMEnt is invalid, it recreates the WM inste
 returning and ignoring the invalid data. Fixes the issue where other players using the SWEPs, 
 upon exiting and then re-entering render distance, no longer have the SWEPs in-hand.
 
-
-
-I keep getting occasional errors at the lines mentioned below:
-
-sh_nwext.lua - lines 120 & 121 replaced with:
-if istable(wep.ActiveAttachments) then
-    net.WriteTable(wep.ActiveAttachments)
-    net.Send(ply)
-end
- 
-Simply add a check to ensure ActiveAttachments are in table format and not just nil. 
-Occasionally caused bugs otherwise, attempting to write nil data into a WriteTable 
-command which causes problems. Rare, but does occur. Not sure why, but this removes the error, 
-whatever was causing it never actually resulted in undesired behavior, just console errors.
-
-
+===================================================================================================================
 
 CW2.0 SOUND FIX:
 
@@ -125,9 +140,6 @@ cw_sounds.lua
 lines 7-35:
 change "channel = CHAN_AUTO," to "channel = CHAN_WEAPON," in all three tables.
  
-line 54:
-change "channel = channel or CHAN_AUTO" to "channel = channel or CHAN_WEAPON"
- 
 Resolves the issue where sounds cut one another out sometimes, especially with a 
 large number of sounds loaded at one time through this system. CHAN_AUTO still has 
 limitations to how intelligently it will assign sounds to appropriate channels, 
@@ -135,4 +147,3 @@ while the CHAN_WEAPON is, aside from weapons sounds set directly to it, typicall
 unused, so it's a safer bet, and obviously a more appropriate choice.
 (I'm convinced that, despite it saying it auto-determines the best channel, 
 it just slaps it in a default channel with 0 considerations whatsoever)
---]]

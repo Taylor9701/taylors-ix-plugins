@@ -1,3 +1,4 @@
+local PLUGIN = PLUGIN
 PLUGIN.name = "CW Weapons"
 PLUGIN.author = "Lt. Taylor"
 PLUGIN.desc = "Allows CW2.0 and CW2.0 KK INS2 SWEPs to be used without issue."
@@ -5,6 +6,8 @@ PLUGIN.desc = "Allows CW2.0 and CW2.0 KK INS2 SWEPs to be used without issue."
 if not CustomizableWeaponry then return end
 
 ix.util.Include("sv_plugin.lua")
+ix.util.Include("sh_kkins2fix.lua")
+ix.util.Include("sv_ammo.lua")
 
 --[[ Readme:
 
@@ -16,6 +19,8 @@ and toggling safe mode off/on for raise/lower. There is one small bug with this,
 will raise the weapon for the player, but will not raise it for anyone viewing said player. Cycling the weapon raise toggle will fix this. 
 Fixing this would require editing the weapons base, which cannot be done via a plugin such as this. It is what it is.
 
+NOTE: sh_kkins2fix.lua IS AN EXPERIMENTAL METHOD TO BUGFIX CW/KKINS2 ISSUES. If it gives you problems, it is safe to remove along with the
+ix.util.Include(sh_kkins2fix.lua) line just above this. Bugs will exist, but functionality will be continued.
 
 Advice: 
 I recommend using this plugin with CW2.0 and CW2.0 KK INS2 together. This will give you access to far more 
@@ -29,8 +34,6 @@ as others may cause conflicts/issues/bugs. Experiment with the others at your ow
 "Customizable Weaponry 2.0"
 "Extra Customizable Weaponry 2.0"
 
-If you are looking for unrealistic weaponry or obscure things, other weapons bases may serve your needs better.
-Make sure to look into what is available and what will fit your needs most appropriately before getting dirty with the work.
 Using CW2.0 and CW2.0 KK INS2 should not cause any conflicts with other weapon bases to my knowledge, however I cannot guarantee that.
 If you have a need to use this alongside other weapons base(s), make sure to thoroughly test them working side-by-side to
 ensure there are no errors, bugs, or undesired behavior(s).
@@ -48,44 +51,35 @@ Multiple attachments can be attached to a single item, however, a single attachm
 This is useful in any case such as "CW2.0 KK INS2 Foregrip vs. CW2.0 Base Foregrip". They have different attachment names, but 
 conceptually ought to be represented by a single item, and so they can be.
 
-Ammo: Simple ammo items with stacking/quantities built in. You can set the load amount options for each individual ammo item,
-or keep the default spread as can be seen in the ammo item base. Also allows for combining partial stacks to free up inventory space.
-
-Grenades: Along with the functions below, adds functionality for single-use grenade items that remove themselves from your
-inventory on-use after unequipping. Specifically works for CW2.0 KK INS2 grenades.
-
-
-NOTE:
-If you are NOT going to be using CW2.0 KK INS2, remove the "cwgrenades" item base and items folder (to remove error items basically), 
-as well as the two "PLUGIN:" functions below. Shouldn't cause any issues if you leave the below code in, but just in case of 
-conflicts with other hooks or weapon bases, better safe than sorry.
-
+Ammo: Simple ammo items with stacking/quantities built in along with drag-and-drop stacking.
 --]]
 
+if not CustomizableWeaponry_KK then return end
+
 function PLUGIN:GrenadeThrown(entity, grenade)
-    entity = entity.Owner
-    if entity:IsPlayer() then
-        for k, v in pairs(entity:GetChar():GetInv():GetItems()) do
-            if v:GetData("equip", false) == true and v.isGrenade then
-                entity:StripWeapon(v.class)
-    			entity.carryWeapons[v.weaponCategory] = nil
-    			v:SetData("equip", false)
-    			v:Remove()
-		    end
-	    end
-    end
+	entity = entity.Owner
+	if entity:IsPlayer() then
+		for k, v in pairs(entity:GetChar():GetInv():GetItems()) do
+			if v:GetData("equip", false) == true and v.isGrenade then
+				entity:StripWeapon(v.class)
+				entity.carryWeapons[v.weaponCategory] = nil
+				v:SetData("equip", false)
+				v:Remove()
+			end
+		end
+	end
 end
 
 function PLUGIN:GrenadeOvercooked(entity, grenade)
-    entity = entity.Owner
-    if entity:IsPlayer() then
-        for k, v in pairs(entity:GetChar():GetInv():GetItems()) do
-            if v:GetData("equip", false) == true and v.isGrenade then
-                entity:StripWeapon(v.class)
-    			entity.carryWeapons[v.weaponCategory] = nil
-    			v:SetData("equip", false)
-    			v:Remove()
-		    end
-	    end
-    end
+	entity = entity.Owner
+	if entity:IsPlayer() then
+		for k, v in pairs(entity:GetChar():GetInv():GetItems()) do
+			if v:GetData("equip", false) == true and v.isGrenade then
+				entity:StripWeapon(v.class)
+				entity.carryWeapons[v.weaponCategory] = nil
+				v:SetData("equip", false)
+				v:Remove()
+			end
+		end
+	end
 end
