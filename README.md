@@ -13,7 +13,7 @@ Enables the functionality of Artifacts, with varying positive and negative effec
 Provides a simple and lightweight solution for calculating and limiting players' inventory weight.
 
 ### [PDAs](#pdas)
-Straightforward plugin required for using global messaging, accessing the rankings system, as well as for setting a personal PDA and Rankings image to be used.
+Straightforward plugin required for using global messaging, accessing the rankings system, as well as for setting a character image to be used in said global messaging, as well as in Rankings.
 
 ## Upgrades
 ![upgrades](https://user-images.githubusercontent.com/35386424/154877130-91daa92f-4d9c-4296-a239-b2e28b640ede.png)
