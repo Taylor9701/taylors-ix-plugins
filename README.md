@@ -1,10 +1,19 @@
 # Taylor's Helix (IX) Plugins
 
-1. [Upgrades](#upgrades): Creates a framework ready to be implemented which allows for dynamically structured upgrade trees for any chosen items. Requires a good amount of setup.
-2. [Rankings](#rankings): Adds a tab that shows information about various players currently on the server, their rank, and their character's info. Players must opt into this, and can decide what character info they wish to share with others.
-3. [Artifacts](#artifacts): Enables the functionality of Artifacts, with varying positive and negative effects.
-4. [Weight](#weight): Provides a simple and lightweight solution for calculating and limiting players' inventory weight.
-5. [PDAs](#pdas): Straightforward plugin required for using global messaging, accessing the rankings system, as well as for setting a personal PDA and Rankings image to be used.
+### [Upgrades](#upgrades)
+Creates a framework ready to be implemented which allows for each item to not only have an upgrade tree, but for each one to be entirely unique. Requires a good amount of setup in the form of data tables. More info on tools to help create these tables without wasting too much time is contained in the relevant section below.
+
+### [Rankings](#rankings)
+Adds a tab that shows information about various players currently on the server, their rank, and their character's info. Players must opt into this, and can decide what character info they wish to share with others.
+
+### [Artifacts](#artifacts)
+Enables the functionality of Artifacts, with varying positive and negative effects.
+
+### [Weight](#weight)
+Provides a simple and lightweight solution for calculating and limiting players' inventory weight.
+
+### [PDAs](#pdas)
+Straightforward plugin required for using global messaging, accessing the rankings system, as well as for setting a personal PDA and Rankings image to be used.
 
 ## Upgrades
 ![upgrades](https://user-images.githubusercontent.com/35386424/154877130-91daa92f-4d9c-4296-a239-b2e28b640ede.png)
