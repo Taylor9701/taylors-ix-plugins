@@ -1,18 +1,18 @@
 # Taylor's Helix (IX) Plugins
 
-### [Upgrades](#upgrades)
+### [Upgrades](#upgrades-1)
 Creates a framework ready to be implemented which allows for each item to not only have an upgrade tree, but for each one to be entirely unique. Requires a good amount of setup in the form of data tables. More info on tools to help create these tables without wasting too much time is contained in the relevant section below.
 
-### [Rankings](#rankings)
+### [Rankings](#rankings-1)
 Adds a tab that shows information about various players currently on the server, their rank, and their character's info. Players must opt into this, and can decide what character info they wish to share with others.
 
-### [Artifacts](#artifacts)
+### [Artifacts](#artifacts-1)
 Enables the functionality of Artifacts, with varying positive and negative effects.
 
-### [Weight](#weight)
+### [Weight](#weight-1)
 Provides a simple and lightweight solution for calculating and limiting players' inventory weight.
 
-### [PDAs](#pdas)
+### [PDAs](#pdas-1)
 Straightforward plugin required for using global messaging, accessing the rankings system, as well as for setting a character image to be used in said global messaging, as well as in Rankings.
 
 ## Upgrades
