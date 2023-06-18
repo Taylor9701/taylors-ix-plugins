@@ -1,13 +1,39 @@
 # Taylor's Helix (IX) Plugins
-Several Garry's Mod Helix gamemode plugins, in hopefully functional states. Some may require additional changes to a schema in order to integrate and function successfully.
 
-Content dependencies are not my work. They are, however, necessary for certain things to function, so if you're having audio/visual issues, try the content first.
+### [Upgrades](#upgrades-1)
+Creates a framework ready to be implemented which allows for each item to not only have an upgrade tree, but for each one to be entirely unique. Requires a good amount of setup in the form of data tables. More info on tools to help create these tables without wasting too much time is contained in the relevant section below.
+
+### [Rankings](#rankings-1)
+Adds a tab that shows information about various players currently on the server, their rank, and their character's info. Players must opt into this, and can decide what character info they wish to share with others.
+
+### [Artifacts](#artifacts-1)
+Enables the functionality of Artifacts, with varying positive and negative effects.
+
+### [Weight](#weight-1)
+Provides a simple and lightweight solution for calculating and limiting players' inventory weight.
+
+### [PDAs](#pdas-1)
+Straightforward plugin required for using global messaging, accessing the rankings system, as well as for setting a character image to be used in said global messaging, as well as in Rankings.
 
 ## Upgrades
 ![upgrades](https://user-images.githubusercontent.com/35386424/154877130-91daa92f-4d9c-4296-a239-b2e28b640ede.png)
 The Upgrades UI plugin is in itself relatively feature-complete. What is not complete, however, should you wish to use it, is the integrations and any changes you may need. Integrations refers to making the data sets on the items actually implemented. Some things are simple to implement, others are not. This Plugin will require a certain level of programming experience to make use of at all, and to make the most of it, a solid level of competency.
 
 The upgrade trees themselves are entirely dynamic, defined rather easily in two tables. One in the plugin itself, one in the item being upgraded. Make sure to observe through the examples provided what details match between the two tables. Ordering in tables is important, so please observe that as well.
+
+For ease of table creation, the following Regex formulas can validate the table data for both types of tables present in this plugin.
+
+### Plugin Table Entries RegEx
+```
+^\["([\w]|[_]|[\d])+\"\] = {name = "[\w|\s]+", desc = "[\w|\s]+\.*", price = \d+, enames = {[\"\w\"\,? ]+}, img = "[\w|\/|\d|\.|\_]+"},$
+```
+
+### Item Table Entries RegEx
+```
+^{name = "[\w|\s]+", dep = {"[\w|\s]+[ or ]?[\w|\s]+"}, adjacent = {"[\w|\s]+"}, blocks = {[\"\w|\s\"\,? ]+}, amounts = {\d+}, pos = \d, row = \d},$
+```
+
+Alternatively, feel free to make a copy of [this google sheet](https://docs.google.com/spreadsheets/d/11GMEUL8g-1mIsWqb17be_qhnoyLJvtjURkfaVQnSyhk/edit?usp=sharing) if you don't know exactly what to do with the above to make a useful table creation tool.
 
 ## Rankings
 ![rankings](https://user-images.githubusercontent.com/35386424/154877254-e7444d80-fb25-41f9-a276-56ebd186f698.png)
@@ -43,9 +69,9 @@ Originally written by Verne, moderately changed and fixed over the years. Needed
 ## Notes
 Additional notes and comments are included in each plugin in various files for various reasons. Please make sure to read these if you are confused or stuck on something.
 
-A lot of the more difficult code here in the Rankings and Upgrades UIs were not meant for public release originally, essentially a "my eyes only" situation. As such they are not commented well and are not meant to be legible to others in that manner. Apologies for any difficulties this creates.
+A lot of the more difficult code here in the Rankings and Upgrades UIs were not meant for public release originally, essentially a "my eyes only" situation. As such they are not commented well and are not meant to be legible to others in that manner. Apologies for any difficulties this creates. I will attempt to resolve this with an upcoming revisitation soon.
 
 I do not have the time to assist in any implementations or installations. Bugs should be reported here, please provide as much context as possible.
 
 ## Unsupported Plugins
-As the folder name describes. Currently I only have the heavily modified Attributes plugin there. It is an EXAMPLE of how to implement complicated rolling systems and automating certain turn-based RPG mechanics, like a tabletop style attack system. This was originally written by Verne but was massively changed over time.
+As the folder name describes. Currently I only have the heavily modified Attributes plugin there. It is an EXAMPLE of how to implement complicated rolling systems and automating certain turn-based RPG mechanics, like a tabletop style attack system. The very initial version was written by Verne, but was massively changed over time into what it is now.
