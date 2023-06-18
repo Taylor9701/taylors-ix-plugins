@@ -216,7 +216,7 @@ function PLUGIN:PlayerInteractItem(client, action, item)
 				totweight = (totweight + item.weight)
 			end
 		end
-    elseif action == "drop" then
+    elseif action == "drop" or action == "Sell" then
 		if item.weight then
 			if item:GetData("quantity") then
 				totweight = (totweight - (item:GetData("quantity") * item.weight))

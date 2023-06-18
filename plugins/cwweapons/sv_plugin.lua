@@ -52,7 +52,7 @@ end
 function PLUGIN:M203Fired(client)
 	if not client then return end
 	
-	for k,v in pairs(client:GetChar():GetInv():GetItems()) do
+	for k,v in pairs(client:GetChar():GetInventory():GetItems()) do
 		if v.isAmmo == true then
 			if v.ammo == "40MM" then
 				local oldquan = v:GetData("quantity",1)

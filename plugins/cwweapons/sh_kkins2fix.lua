@@ -223,7 +223,19 @@ end
 for id,wepdata in pairs(weapons.GetList()) do 
 	if wepdata.Base == "cw_kk_ins2_base" then
 		SWEP = weapons.GetStored(wepdata.ClassName)
+		local _reg = debug.getregistry()
+		local _ent = _reg.Entity
+		local EntGetBoneMatrix = _ent.GetBoneMatrix
+		
+		local _ang = _reg.Angle
+		local AngRotateAroundAxis = _ang.RotateAroundAxis
+		local AngUp = _ang.Up
+		local AngRight = _ang.Right
+		local AngForward = _ang.Forward
+		
 		function SWEP:Holster(wep)			-- Holstering Error Fix
+			
+			
 			if not IsValid(wep) and not IsValid(self.SwitchWep) then
 				self.SwitchWep = nil
 				return false
@@ -315,7 +327,7 @@ for id,wepdata in pairs(weapons.GetList()) do
 			
 			if IsValid(self.Owner) then
 				if not self.OwnerAttachBoneID then
-					self.OwnerAttachBoneID = EntLookupBone(self.Owner, "ValveBiped.Bip01_R_Hand")
+					self.OwnerAttachBoneID = self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")
 				end
 				
 				if isnumber(self.OwnerAttachBoneID) then
@@ -330,6 +342,8 @@ for id,wepdata in pairs(weapons.GetList()) do
 							end
 						end
 					end
+					
+					
 			
 					pos = m:GetTranslation()
 					ang = m:GetAngles()
@@ -381,7 +395,7 @@ for id,wepdata in pairs(weapons.GetList()) do
 			self.HUD_3D2DScale = self.HUD_3D2DScale * 1.5
 			self.CustomizationMenuScale = self.CustomizationMenuScale * 1.5
 
-			if IsValid(self.Owner) and self.Owner == LocalPlayer() then
+			if IsValid(self.Owner) and self.Owner == LocalPlayer() and IsValid(cvAmmoHud) then
 				cam.IgnoreZ(true)
 				self:drawInteractionMenu()
 				if cvAmmoHud:GetInt() >= 1 then

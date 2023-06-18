@@ -25,7 +25,7 @@ function PLUGIN:AmmoCheck(client, weapon)
 	
 	if string.match(weapon:GetClass(),"cw_kk_ins2_nade") then return end
 	
-	for k,v in pairs(client:GetChar():GetInv():GetItems()) do
+	for k,v in pairs(client:GetChar():GetInventory():GetItems()) do
 		if v.isAmmo == true then
 			if ammoType == v.ammo then
 				ammoCount = ammoCount + v:GetData("quantity",1)
@@ -58,7 +58,7 @@ function WeaponFired(entity, data)
 		
 		if wep.Damage != data.Damage then return end -- Ricochets have reduced damage, so we can filter them out this way
 		
-		for k,v in pairs(entity:GetChar():GetInv():GetItems()) do
+		for k,v in pairs(entity:GetChar():GetInventory():GetItems()) do
 			if v.isAmmo == true then
 				if wep.Primary.Ammo == v.ammo then
 					ammo = v
@@ -70,6 +70,12 @@ function WeaponFired(entity, data)
 						item = v
 					end
 				end
+			end
+		end
+		
+		if item then
+			if item.modifier then
+				item:SetData("durability", (item:GetData("durability",10000) - item.modifier))
 			end
 		end
 		

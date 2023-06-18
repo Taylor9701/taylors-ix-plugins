@@ -59,7 +59,7 @@ if not CustomizableWeaponry_KK then return end
 function PLUGIN:GrenadeThrown(entity, grenade)
 	entity = entity.Owner
 	if entity:IsPlayer() then
-		for k, v in pairs(entity:GetChar():GetInv():GetItems()) do
+		for k, v in pairs(entity:GetChar():GetInventory():GetItems()) do
 			if v:GetData("equip", false) == true and v.isGrenade then
 				entity:StripWeapon(v.class)
 				entity.carryWeapons[v.weaponCategory] = nil
@@ -73,7 +73,7 @@ end
 function PLUGIN:GrenadeOvercooked(entity, grenade)
 	entity = entity.Owner
 	if entity:IsPlayer() then
-		for k, v in pairs(entity:GetChar():GetInv():GetItems()) do
+		for k, v in pairs(entity:GetChar():GetInventory():GetItems()) do
 			if v:GetData("equip", false) == true and v.isGrenade then
 				entity:StripWeapon(v.class)
 				entity.carryWeapons[v.weaponCategory] = nil
