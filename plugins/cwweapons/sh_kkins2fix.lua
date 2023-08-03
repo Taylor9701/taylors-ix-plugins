@@ -6,10 +6,6 @@ local PLUGIN = PLUGIN
 	for things like PAC and working side-by-side with other SWEP bases. Essentially,
 	this is bugfixing, and the only credit claimed is for adding a line or two to each
 	function.
-	
-	This is to be considered an "Experimental" method for now until proper multiplayer dedicated
-	server testing is done with it. Works in a LAN server, but this is not quite the same as
-	a live server. Use at your own risk.
 --]]
 
 if not CustomizableWeaponry then return end
@@ -223,19 +219,7 @@ end
 for id,wepdata in pairs(weapons.GetList()) do 
 	if wepdata.Base == "cw_kk_ins2_base" then
 		SWEP = weapons.GetStored(wepdata.ClassName)
-		local _reg = debug.getregistry()
-		local _ent = _reg.Entity
-		local EntGetBoneMatrix = _ent.GetBoneMatrix
-		
-		local _ang = _reg.Angle
-		local AngRotateAroundAxis = _ang.RotateAroundAxis
-		local AngUp = _ang.Up
-		local AngRight = _ang.Right
-		local AngForward = _ang.Forward
-		
 		function SWEP:Holster(wep)			-- Holstering Error Fix
-			
-			
 			if not IsValid(wep) and not IsValid(self.SwitchWep) then
 				self.SwitchWep = nil
 				return false
@@ -331,28 +315,26 @@ for id,wepdata in pairs(weapons.GetList()) do
 				end
 				
 				if isnumber(self.OwnerAttachBoneID) then
-					m = EntGetBoneMatrix(self.Owner, self.OwnerAttachBoneID)
+					m = self.Owner:GetBoneMatrix(self.OwnerAttachBoneID)
 					
 					if not m then
-						if isnumber(EntLookupBone(self.Owner, "ValveBiped.Bip01_R_Hand")) then
-							m = EntGetBoneMatrix(self.Owner, EntLookupBone(self.Owner, "ValveBiped.Bip01_R_Hand"))
+						if isnumber(self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")) then
+							m = self.Owner:GetBoneMatrix(self.Owner, self.Owner:LookupBone("ValveBiped.Bip01_R_Hand"))
 				
 							if not m then
 								return
 							end
 						end
 					end
-					
-					
 			
 					pos = m:GetTranslation()
 					ang = m:GetAngles()
 			
-					pos = pos + AngForward(ang) * self.WMPos.x + AngRight(ang) * self.WMPos.y + AngUp(ang) * self.WMPos.z
+					pos = pos + ang:Forward() * self.WMPos.x + ang:Right() * self.WMPos.y + ang:Up() * self.WMPos.z
 			
-					AngRotateAroundAxis(ang, AngUp(ang), self.WMAng.y)
-					AngRotateAroundAxis(ang, AngRight(ang), self.WMAng.x)
-					AngRotateAroundAxis(ang, AngForward(ang), self.WMAng.z)
+					ang:RotateAroundAxis(ang:Up(), self.WMAng.y)
+					ang:RotateAroundAxis(ang:Right(), self.WMAng.x)
+					ang:RotateAroundAxis(ang:Forward(), self.WMAng.z)
 				end
 			else
 				self.OwnerAttachBoneID = false
@@ -395,12 +377,14 @@ for id,wepdata in pairs(weapons.GetList()) do
 			self.HUD_3D2DScale = self.HUD_3D2DScale * 1.5
 			self.CustomizationMenuScale = self.CustomizationMenuScale * 1.5
 
-			if IsValid(self.Owner) and self.Owner == LocalPlayer() and IsValid(cvAmmoHud) then
+			if IsValid(self.Owner) and self.Owner == LocalPlayer() then
 				cam.IgnoreZ(true)
 				self:drawInteractionMenu()
-				if cvAmmoHud:GetInt() >= 1 then
-					self:draw3D2DHUD()
-				end
+                if cvAmmoHud then
+                    if cvAmmoHud:GetInt() >= 1 then
+                        self:draw3D2DHUD()
+                    end
+                end
 				cam.IgnoreZ(false)
 			end
 
