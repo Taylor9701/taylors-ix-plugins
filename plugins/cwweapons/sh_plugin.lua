@@ -9,6 +9,10 @@ ix.util.Include("sv_plugin.lua")
 ix.util.Include("sh_kkins2fix.lua")
 ix.util.Include("sv_ammo.lua")
 
+ix.config.Add("durability", true, "Whether or not durability loss occurs.", nil, {
+	category = "server"
+})
+
 --[[ Readme:
 
 Includes item bases for CW Weapons, Attachments, Ammo, and CW2.0 KK INS2 Grenades.
@@ -59,7 +63,7 @@ if not CustomizableWeaponry_KK then return end
 function PLUGIN:GrenadeThrown(entity, grenade)
 	entity = entity.Owner
 	if entity:IsPlayer() then
-		for k, v in pairs(entity:GetChar():GetInventory():GetItems()) do
+		for k, v in pairs(entity:GetChar():GetInv():GetItems()) do
 			if v:GetData("equip", false) == true and v.isGrenade then
 				entity:StripWeapon(v.class)
 				entity.carryWeapons[v.weaponCategory] = nil
@@ -73,7 +77,7 @@ end
 function PLUGIN:GrenadeOvercooked(entity, grenade)
 	entity = entity.Owner
 	if entity:IsPlayer() then
-		for k, v in pairs(entity:GetChar():GetInventory():GetItems()) do
+		for k, v in pairs(entity:GetChar():GetInv():GetItems()) do
 			if v:GetData("equip", false) == true and v.isGrenade then
 				entity:StripWeapon(v.class)
 				entity.carryWeapons[v.weaponCategory] = nil
