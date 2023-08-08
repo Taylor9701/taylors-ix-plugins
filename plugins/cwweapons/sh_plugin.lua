@@ -10,13 +10,13 @@ ix.util.Include("sh_kkins2fix.lua")
 ix.util.Include("sv_ammo.lua")
 
 ix.config.Add("Durability", true, "Whether or not durability loss occurs.", nil, {
-	category = "server"
+	category = "TPlugins"
 })
 
 -- Feel free to disable this if you prefer the right-click + load method of using ammunition, or have many different weapon systems that this conflicts with.
 -- Suggest a restart if changing this outside development conditions.
 ix.config.Add("Custom Ammo", true, "Disable if the ammo-from-inventory feature is causing problems.", nil, {
-	category = "server"
+	category = "TPlugins"
 })
 
 --[[ Readme:
