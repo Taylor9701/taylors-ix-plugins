@@ -9,7 +9,13 @@ ix.util.Include("sv_plugin.lua")
 ix.util.Include("sh_kkins2fix.lua")
 ix.util.Include("sv_ammo.lua")
 
-ix.config.Add("durability", true, "Whether or not durability loss occurs.", nil, {
+ix.config.Add("Durability", true, "Whether or not durability loss occurs.", nil, {
+	category = "server"
+})
+
+-- Feel free to disable this if you prefer the right-click + load method of using ammunition, or have many different weapon systems that this conflicts with.
+-- Suggest a restart if changing this outside development conditions.
+ix.config.Add("Custom Ammo", true, "Disable if the ammo-from-inventory feature is causing problems.", nil, {
 	category = "server"
 })
 
@@ -33,14 +39,14 @@ talented creators put a large amount of work into the models, animations, and te
 baseline CW2.0 content.
 
 If you're going to use CW2.0 KK INS2, I recommend only including these addons from the "required" list for CW2.0 KK INS2, 
-as others may cause conflicts/issues/bugs. Experiment with the others at your own risk:
+as others may cause conflicts/issues/bugs:
 
 "Customizable Weaponry 2.0"
 "Extra Customizable Weaponry 2.0"
 
 Using CW2.0 and CW2.0 KK INS2 should not cause any conflicts with other weapon bases to my knowledge, however I cannot guarantee that.
-If you have a need to use this alongside other weapons base(s), make sure to thoroughly test them working side-by-side to
-ensure there are no errors, bugs, or undesired behavior(s).
+If you have a need to use this alongside other weapons bases, make sure to thoroughly test them working side-by-side to
+ensure there are no errors, bugs, or undesired behaviors.
 
 
 Specifics:

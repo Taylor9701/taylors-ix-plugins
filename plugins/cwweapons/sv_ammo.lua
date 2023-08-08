@@ -7,6 +7,7 @@ local timerdelay = 1
 function PLUGIN:Think()
 	if timerdelay < CurTime() then
 		timerdelay = CurTime() + 5
+        if not ix.config.Get("Custom Ammo",false) then return end
 		for id,ply in pairs(player.GetHumans()) do
 			wep = ply:GetActiveWeapon()
 			if (wep.Base == "cw_kk_ins2_base") then
@@ -17,7 +18,7 @@ function PLUGIN:Think()
 end
 
 function PLUGIN:AmmoCheck(client, weapon)
-	if not weapon then return end
+	if not weapon || not ix.config.Get("Custom Ammo",false) then return end
 	
 	local ammoCount = 0
 	local ammoCountGL = 0
@@ -49,15 +50,13 @@ function PLUGIN:AmmoCheck(client, weapon)
 	end
 end
 
-function WeaponFired(entity, data)
-	if entity and entity:IsPlayer() then
+function WeaponFired(entity)
+	if entity and entity:IsPlayer() and ix.config.Get("Custom Ammo",false) then
 		local wep = entity:GetActiveWeapon()
 		local wepclass = wep:GetClass()
 		local item
 		local ammo
-		
-		if wep.Damage != data.Damage then return end -- Ricochets have reduced damage, so we can filter them out this way
-		
+        
 		for k,v in pairs(entity:GetChar():GetInv():GetItems()) do
 			if v.isAmmo == true then
 				if wep.Primary.Ammo == v.ammo then
@@ -79,7 +78,6 @@ function WeaponFired(entity, data)
             end
         end
 		
-		local newAmmo
 		if ammo then
 			local ammoCount = ammo:GetData("quantity") or 1
 			if ammoCount == 1 then
@@ -91,4 +89,4 @@ function WeaponFired(entity, data)
 	end
 end
 
-hook.Add("EntityFireBullets", "AmmoConsumption", WeaponFired)
+hook.Add("AmmoConsumption", "AmmoConsumption", WeaponFired)
